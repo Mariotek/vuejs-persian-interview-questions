@@ -3,6 +3,20 @@ List of 300 VueJS Interview Questions
 
 > Click :star:if you like the project. Pull Requests are highly appreciated. Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
 
+---
+<p align="center">
+  <a href=https://zerotomastery.io/?utm_source=github&utm_medium=sponsor&utm_campaign=vue-interview-questions>
+    <img src=https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:70/https://www.filepicker.io/api/file/AKYtjj5SSGyJuyZrkAB2 alt="ZTM Logo">
+  </a>
+  <p align="center">
+    <ol>
+    <li>Take this <a href=https://links.zerotomastery.io/vue_sudheer>Vue.js course</a> to go from a complete Vue beginner to confidently building large-scale applications from scratch</li>
+    <li>Take this <a href=https://links.zerotomastery.io/mci_sudheer4>coding interview bootcamp</a> if you’re serious about getting hired and don’t have a CS degree</li>
+    </ol>
+  </p>
+</p>
+---
+
 ### Table of Contents
 -------------------------------------------------------------------
 | No. | Questions |
@@ -84,7 +98,7 @@ List of 300 VueJS Interview Questions
 |75 | [What is the difference between VueJS and ReactJS?](#what-is-the-difference-between-vuejs-and-reactjs)|
 |76 | [What are the advantages of VueJS over ReactJS?](#what-are-the-advantages-of-vuejs-over-reactjs)|
 |77 | [What are the advantages of ReactJS over VueJS?](#what-are-the-advantages-of-reactjs-over-vuejs)|
-|78 | [What are the differences between VueJS and AngularJS?](#What-are-the-differences-between-vuejs-and-angularjs)|
+|78 | [What are the differences between VueJS and Angular?](#What-are-the-differences-between-vuejs-and-angular)|
 |79 | [What are dynamic components?](#what-are-dynamic-components)|
 |80 | [What is the purpose of keep alive tag?](#what-is-the-purpose-of-keep-alive-tag)|
 |81 | [What are async components?](#what-are-async-components)|
@@ -235,8 +249,9 @@ List of 300 VueJS Interview Questions
 |226| [What happens if you use duplicate field names?](#what-happens-if-you-use-duplicate-field-names)|
 |227| [Why the component data must be a function?](#why-the-component-data-must-be-a-function)|
 |228| [What is the reason for recommendation for multi-word component names?](#what-is-the-reason-for-recommendation-for-multi-word-component-names)|
-|229| [](#)|
-|230| [](#)|
+|229| [How to use composition API in Vue2.0?](#how-to-use-composition-api-in-vue2.0)|
+|230| [What is composition API?](#what-is-composition-api)|
+|231| [What is the best way to re-render a component?](#what-is-the-best-way-to-re-render-a-component)
 
 1.  ### What is VueJS?
     **Vue.js** is an open-source, progressive Javascript framework for building user interfaces that aim to be incrementally adoptable. The core library of VueJS is focused on the `view layer` only, and is easy to pick up and integrate with other libraries or existing projects.
@@ -256,7 +271,7 @@ List of 300 VueJS Interview Questions
 3.  ### What are the lifecycle methods of VueJS?
     Lifecycle hooks are a window into how the library you’re using works behind-the-scenes. By using these hooks, you will know when your component is created, added to the DOM, updated, or destroyed. Let's look at lifecycle diagram before going to each lifecycle hook in detail,
 
-    <img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/vuelifecycle.png" width="400" height="800">
+    <img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/lifecycle.png" width="400" height="800">
 
     1. **Creation(Initialization):**
         Creation Hooks allow you to perform actions before your component has even been added to the DOM. You need to use these hooks if you need to set things up in your component both during client rendering and server rendering. Unlike other hooks, creation hooks are also run during server-side rendering.
@@ -432,7 +447,7 @@ List of 300 VueJS Interview Questions
     **[⬆ Back to Top](#table-of-contents)**
 
 5.  ### What is the difference between v-show and v-if directives?
-    Below are some of the main differences between between **v-show** and **v-if** directives,
+    Below are some of the main differences between **v-show** and **v-if** directives,
 
     1. v-if only renders the element to the DOM if the expression passes whereas v-show renders all elements to the DOM and then uses the CSS display property to show/hide elements based on expression.
     2. v-if supports v-else and v-else-if directives whereas v-show doesn't support else directives.
@@ -703,7 +718,7 @@ List of 300 VueJS Interview Questions
 
      // `vm.name` is now reactive
 
-     vm.email = john@email.com // `vm.email` is NOT reactive
+     vm.user.email = john@email.com // `vm.user.email` is NOT reactive
      ```
      You can overcome this scenario using the Vue.set(object, key, value) method or Object.assign(),
      ```javascript
@@ -921,7 +936,7 @@ List of 300 VueJS Interview Questions
        template: '<h2>{{ title }}</h2>'
      })
      ```
-     Once the props are registered, you can pass them as custom atrtributes.
+     Once the props are registered, you can pass them as custom attributes.
      ```vue
      <todo-item title="Learn Vue conceptsnfirst"></todo-item>
      ```
@@ -929,21 +944,31 @@ List of 300 VueJS Interview Questions
      **[⬆ Back to Top](#table-of-contents)**
 
 28.  ### When component needs a single root element?
-     Every component must have a single root element **when template has more than one element**. In this case, you need to wrap the elements with a parent element.
+     In VueJS 2.x, every component must have a single root element **when template has more than one element**. In this case, you need to wrap the elements with a parent element.
      ```vue
-     <div class="todo-item">
-       <h2>{{ title }}</h2>
-       <div v-html="content"></div>
-     </div>
+     <template>
+        <div class="todo-item">
+            <h2>{{ title }}</h2>
+            <div v-html="content"></div>
+        </div>
+     </template>
      ```
      Otherwise there will an error throwing, saying that "Component template should contain exactly one root element...".
 
+     Whereas in 3.x, components now can have multiple root nodes. This way of adding multiple root nodes is called as fragments.
+     ```vue
+     <template>
+          <h2>{{ title }}</h2>
+          <div v-html="content"></div>
+     </template>
+     ```
+     
      **[⬆ Back to Top](#table-of-contents)**
 
 29.  ### How do you communicate from child to parent using events?
      If you want child wants to communicate back up to the parent, then emit an event from child using `$emit` object to parent,
      ```javascript
-     Vue.component('todo-tem', {
+     Vue.component('todo-item', {
        props: ['todo'],
        template: `
          <div class="todo-item">
@@ -998,7 +1023,7 @@ List of 300 VueJS Interview Questions
      **[⬆ Back to Top](#table-of-contents)**
 
 31.  ### What are slots?
-     Vue implements a content distribution API using the <slot> element to serve as distribution outlets for content created after after the current Web Components spec draft.
+     Vue implements a content distribution API using the <slot> element to serve as distribution outlets for content created after the current Web Components spec draft.
 
      Let's create an alert component with slots for content insertion,
      ```javascript
@@ -2088,12 +2113,12 @@ List of 300 VueJS Interview Questions
 
      **[⬆ Back to Top](#table-of-contents)**
 
-78.  ### What are the differences between VueJS and AngularJS?
+78.  ### What are the differences between VueJS and Angular?
      The  the syntax of Vue and Angular is common at some points because Angular is the basis for VueJS development in the beginning.
 
      But there are many differences between VueJS and Angular as listed,
 
-      | Feature | VueJS | AngularJS |
+      | Feature | VueJS | Angular |
       |---- | --------- | ---- |
       | Complexity | Easy to learn, simple API and design | The framework is bit huge and need some learning curve on typescript etc |
       | Binding of Data  | One-way binding | Two-way binding |
@@ -2256,7 +2281,7 @@ List of 300 VueJS Interview Questions
      ```javascript
      //ComponentB
      <div>
-       <component-b >
+       <component-a >
      </div>
      ```
      This can be solved by either registering(or wait until) the child component in `beforeCreate` hook or using webpack's asynchronous import while registering the component,
@@ -3419,7 +3444,7 @@ List of 300 VueJS Interview Questions
             template: `<div>{{ greet }}</div>`,
             computed: {
               greet () {
-                return this.$store.state.msg
+                return this.\$store.state.msg
               }
             }
           }
@@ -3947,7 +3972,7 @@ List of 300 VueJS Interview Questions
 
      computed: {
        ...mapState({
-         message: state => state.user.username
+         username: state => state.user.username
        })
      },
      methods: {
@@ -3969,7 +3994,7 @@ List of 300 VueJS Interview Questions
      ```javascript
       <input v-model="username">
       computed: {
-       message: {
+       username: {
          get () {
            return this.$store.state.user.username
          },
@@ -4202,7 +4227,13 @@ List of 300 VueJS Interview Questions
      **[⬆ Back to Top](#table-of-contents)**
 
 197. ### How do you create reactive objects?
-     From 2.6 version onwards, you can create reactive objects with Vue.observable() global API.
+     In version 3.0 you can create a reactive object with the reactive() API.
+     ```javascript
+     const reactiveState = reactive({
+     count: 0
+      })
+      ```
+     In version 2.6, you can create reactive objects with Vue.observable() global API.
      ```javascript
      const reactiveState = Vue.observable({
        count: 0
@@ -4929,7 +4960,7 @@ List of 300 VueJS Interview Questions
      **[⬆ Back to Top](#table-of-contents)**
 
 228. ### What is the reason for recommendation for multi-word component names?
-     Component names should always be multi-word, except for root level or built-in vue components(such as `<transition>` or `<component>` etc). This recommendation is  to prevents conflicts with existing and future HTML elements, since all HTML elements are a single word.
+     Component names should always be multi-word, except for root level or built-in vue components(such as `<transition>` or `<component>` etc). This recommendation is  to prevent conflicts with existing and future HTML elements, since all HTML elements are a single word.
      ```js
      Vue.component('user', { //bad approach
        // ...
@@ -4941,10 +4972,40 @@ List of 300 VueJS Interview Questions
 
      **[⬆ Back to Top](#table-of-contents)**
 
-229. ### ?
+229. ### How to use composition API in Vue2.0?
+     Even though the Composition API is a part of Vue 3, it has been made available for Vue 2 as well by installing `@vue/composition-api` as a plugin via `Vue.use()`.
+
+     Let's see the usage in step by step instructions,
+
+     1. Run the below commands to install
+         ```javascript
+         npm install @vue/composition-api
+         # or
+         yarn add @vue/composition-api
+         ```
+
+     2. After that import this API in your main.js file,
+
+         ```js
+         import Vue from 'vue'
+         import VueCompositionAPI from '@vue/composition-api'
+
+         Vue.use(VueCompositionAPI)
+         ```
+     3. Now your project is able to use composition API
+
+         ```js
+         // use the APIs
+         import { ref, reactive } from '@vue/composition-api'
+         ```
 
      **[⬆ Back to Top](#table-of-contents)**
 
-230. ### ?
+230. ### What is composition API?
+     Composition API is a set of additive, function-based APIs that allow flexible composition of component logic.
 
+     **[⬆ Back to Top](#table-of-contents)**
+     
+231. ### What is the best way to re-render a component?
+     The best way to force Vue to re-render a component is to set a `:key` on the component. i.e, Whenever the component to be re-rendered, just change the value of the key then Vue will re-render the component.
      **[⬆ Back to Top](#table-of-contents)**
