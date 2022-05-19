@@ -1,0 +1,231 @@
+What is VueJS
+What are the major features of VueJS
+What are the lifecycle methods of VueJS
+What are the conditional directives
+What is the difference between v-show and v-if directives
+What is the purpose of v-for directive?
+What is vue instance?
+How do you achieve conditional group of elements?
+How do you reuse elements with key attribute?
+Why should not use if and for directives together on the same element?
+Why do you need to use key attribute on for directive?
+What are the array detection mutation methods?
+What are the array detection non mutation methods?
+What are the caveats of array changes detection?
+What are the caveats of object changes detection?
+How do you use for directive with a range?
+How do you use for directive on template?
+How do you use event handlers?
+What are the event modifiers provided by vue?
+What are key modifiers?
+How do you define custom key modifier aliases?
+What are the supported System Modifier Keys?
+What are the supported Mouse Button Modifiers?
+How do you implement two way binding?
+What are the supported modifiers on model?
+What are components and give an example?
+What are props?
+When component needs a single root element?
+How do you communicate from child to parent using events?
+How do you implement model on custom input components?
+What are slots?
+What is global registration in components?
+Why do you need local registration?
+What is the difference between local and global registration in module system?
+What are possible prop types?
+What is the data flow followed by props?
+What are non prop attributes?
+Describe about validations available for props?
+How do you customize model directive for a component?
+What are the possible ways to provide transitions?
+What is vue router and their features?
+What are the steps to use vue router and give an example?
+What is dynamic route matching?
+How to make router param changes as reactive?
+What is route matching priority?
+What are nested routes?
+What are single file components?
+Is Single File Components violating separation of concerns?
+What are the problems solved by Single File Components?
+What are filters?
+What are the different ways to create filters?
+How do you chain filters
+Is it possible to pass parameters for filters?
+What are plugins and their various services?
+ How to create a plugin?
+How to use a plugin?
+What are mixins?
+What are global mixins?
+How do you use mixins in CLI?
+What are the merging strategies in mixins?
+What are custom options merging strategies?
+What are custom directives?
+How do you register directives locally?
+What are the hook functions provided by directives?
+What are the directive Hook Arguments?
+How do you pass multiple values to a directive?
+What is function shorthand in directive hooks?
+What is the benefit of render functions over templates?
+What is a render function?
+Explain the structure of createElement with arguments
+How can you write duplicate virtual nodes in a component?
+List down the template equivalents in render functions?
+What are functional components?
+What are the similarities between VueJS and ReactJS?
+What is the difference between VueJS and ReactJS?
+What are the advantages of VueJS over ReactJS?
+What are the advantages of ReactJS over VueJS?
+What are the differences between VueJS and Angular?
+What are dynamic components?
+What is the purpose of keep alive tag?
+What are async components?
+What is the structure of async component factory?
+What are inline templates?
+What are X Templates?
+What are recursive components?
+How do you resolve circular dependencies between components?
+How do you make sure vue application is CSP complaint?
+What is the difference between full and runtime only builds?
+List down different builds of vuejs?
+How do you configure vuejs in webpack?
+What is the purpose of vuejs compiler?
+What is Dev Tools and its purpose?
+What is the browser support of VueJS?
+How do you use various CDNs?
+How do you force update?
+What is the purpose of vuejs once directive?
+How do you access the root instance?
+List out top 10 organizations using Vuejs?
+What is the purpose of renderError?
+How do you access parent instance?
+What is vuex?
+What are the major components of State Management Pattern?
+How do you represent one way data flow in vuex?
+What is a vuejs loader?
+How do you configure vue loader in webpack?
+What are asset url transform rules?
+How do you work with preprocessors using vue loader?
+What is scoped CSS?
+Is it possible to mix both local and global styles?
+How do you use deep selectors?
+Is parent styles leaked into child components in scoped css?
+How do you style dynamic generated content using scoped css?
+Is CSS modules supported in Vuejs?
+Can I use runtime builds for all templates?
+How to use CSS modules in vuejs?
+Can I use CSS modules for preprocessors?
+Is it possible to use custom inject name for CSS modules?
+What is hot reloading in vue loader?
+What is the default behavior of hot reloading?
+How do you disable hot reloading explicitly?
+How do you use hot reloading?
+What are state preservation rules in hot reloading?
+How to create functional components using vue loader?
+How do you access global properties of functional components?
+How do you perform testing in vuejs?
+How do you apply linting for css?
+How do you use eslint plugin?
+What is the purpose of eslint loader?
+What is CSS extraction?
+What are custom blocks?
+What are the features of stylelint?
+What are the principles for vuex application structure?
+Is Vuex supports hot reloading?
+What is the purpose of hotUpdate API of vuex store?
+How do you test mutations?
+How do you test your getters?
+What is the procedure to run tests in node?
+What is the procedure to run tests in browser?
+What is the purpose of strict mode in vuex?
+Can I use strict mode in production environment?
+What is vuex plugin?
+How do you mutate state in plugins?
+What is vuex store?
+What are the differences of vuex store and plain global object?
+What is the reason not to update the state directly?
+What is Single state tree?
+How do you install vuex?
+Do I need promise for vuex?
+How do you display store state in vue components?
+How do you inject store into child components?
+What is mapState helper?
+How do you combine local computed properties with mapState helper?
+Do you need to replace entire local state with vuex?
+What are vuex getters?
+What is a property style access?
+What is a method style access?
+What is mapGetter helper?
+What are mutations?
+How do you commit with payload?
+What is object style commit?
+What are the caveats with vuex mutations?
+Why mutations should be synchronous?
+How do you perform mutations in components?
+Is it mandatory to use constants for mutation types?
+How do you perform asynchronous operations?
+What are differences between mutations and actions?
+Give an example usage of actions?
+How do you dispatch actions?
+Can you dispatch an action using payload or object?
+Can I use styled components in vuejs?
+How do you dispatch actions in components?
+How do you compose actions?
+What are modules in vuex?
+What is module local state?
+What is namespacing in vuex
+What is the default namespace behavior in vuex?
+When do you reuse modules?
+What are the principles enforced by vuex?
+Can I perform mutations directly in strict mode?
+How to use model directive with two way computed property?
+What is Vue CLI?
+What are the features provided by Vue CLI?
+What is instant prototyping?
+How do you create project using Vue CLI?
+How do you create project using GUI?
+What are plugins in vue CLI?
+How do you install plugins in an existing Vue CLI project?
+How to access local plugins in a project?
+How do you create UI plugins kind of behavior?
+What are presets?
+What is the versioning behavior in preset plugins?
+How do you allow plugin prompts?
+What are remote presets?
+Can I use local presets?
+What is the purpose of browserslist option?
+How do you find VueJS version using API?
+How do you create reactive objects
+What is the purpose new slot directive?
+What is the use of compile method?
+What does nextTick do in VueJS?
+What is async error handling?
+What are Dynamic Directive Arguments?
+What are the drawbacks of dynamic directive arguments?
+What is the special handling for null values in dynamic directive arguments?
+Can I use dynamic directive null value for slots?
+What is Vue I18n plugin?
+#What are the types of formatting?
+What is custom formatting?
+How do you handle Pluralization?
+How to implement DateTime localization?
+How do you implement Number localization?
+How do you perform locale changing
+What is Lazy loading translations?
+What is the main difference between method and computed property?
+What is vuetify?
+How do you watch for nested data changes?
+How to trigger watchers on initialization?
+What is the purpose of comments option?
+How to identify whether code is running on client or server?
+How do you watch route object changes?
+How do you sync current route in vuex store?
+What are navigation guards in vue router?
+Can I use computed property in another computed property?
+How can I use imported constant in template section?
+Is recommended to use async for computed properties?
+What happens if you use duplicate field names?
+Why the component data must be a function?
+What is the reason for recommendation for multi-word component names?
+How to use composition API in Vue2.0?
+What is composition API?
+What is the best way to re-render a component?
