@@ -613,7 +613,7 @@ puppeteer:
           el: '#object',
           data: {
                user: {
-                    firstName: 'John',
+                    firstName: 'John ',
                     lastName: 'Locke',
                     age: 30
                }
