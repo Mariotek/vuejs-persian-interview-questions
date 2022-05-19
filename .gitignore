@@ -2,5 +2,4 @@
 .DS_Store
 npm-debug.log
 .idea
-*.idea/
-.idea/workspace.xml
+node_modules

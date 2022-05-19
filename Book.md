@@ -285,508 +285,508 @@ puppeteer:
 
 1.  ### What is VueJS?
 
-	**Vue.js** is an open-source, progressive Javascript framework for building user interfaces that aim to be incrementally adoptable. The core library of VueJS is focused on the `view layer` only, and is easy to pick up and integrate with other libraries or existing projects.
+     **Vue.js** is an open-source, progressive Javascript framework for building user interfaces that aim to be incrementally adoptable. The core library of VueJS is focused on the `view layer` only, and is easy to pick up and integrate with other libraries or existing projects.
 
-	**[فهرست](#فهرست)**
+     **[فهرست](#فهرست)**
 
 2.  ### What are the major features of VueJS?
 
-	Below are the some of major features available with VueJS:
+     Below are the some of major features available with VueJS:
 
-	1. **Virtual DOM:** It uses virtual DOM similar to other existing frameworks such as ReactJS, Ember etc. Virtual DOM is a light-weight in-memory tree representation of the original HTML DOM and updated without affecting the original DOM.
-	2. **Components:** Used to create reusable custom elements in VueJS applications.
-	3. **Templates:** VueJS provides HTML based templates that bind the DOM with the Vue instance data
-	4. **Routing:** Navigation between pages is achieved through vue-router
-	5. **Light weight:** VueJS is light weight library compared to other frameworks.
+     1. **Virtual DOM:** It uses virtual DOM similar to other existing frameworks such as ReactJS, Ember etc. Virtual DOM is a light-weight in-memory tree representation of the original HTML DOM and updated without affecting the original DOM.
+     2. **Components:** Used to create reusable custom elements in VueJS applications.
+     3. **Templates:** VueJS provides HTML based templates that bind the DOM with the Vue instance data
+     4. **Routing:** Navigation between pages is achieved through vue-router
+     5. **Light weight:** VueJS is light weight library compared to other frameworks.
 
-	**[فهرست](#فهرست)**
+     **[فهرست](#فهرست)**
 
 3.  ### What are the lifecycle methods of VueJS?
 
-	Lifecycle hooks are a window into how the library you’re using works behind-the-scenes. By using these hooks, you will know when your component is created, added to the DOM, updated, or destroyed. Let's look at lifecycle diagram before going to each lifecycle hook in detail,
+     Lifecycle hooks are a window into how the library you’re using works behind-the-scenes. By using these hooks, you will know when your component is created, added to the DOM, updated, or destroyed. Let's look at lifecycle diagram before going to each lifecycle hook in detail,
 
-	<img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/lifecycle.png" width="400" height="800">
+     <img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/lifecycle.png" width="400" height="800">
 
-	1. **Creation(Initialization):** Creation Hooks allow you to perform actions before your component has even been added to the DOM. You need to use these hooks if you need to set things up in your component both during client rendering and server rendering. Unlike other hooks, creation hooks are also run during server-side rendering.
-		
-		1. beforeCreate: This hook runs at the very initialization of your component. hook observes data and initialization events in your component. Here, data is still not reactive and events that occur during the component’s lifecycle have not been set up yet.
+     1. **Creation(Initialization):** Creation Hooks allow you to perform actions before your component has even been added to the DOM. You need to use these hooks if you need to set things up in your component both during client rendering and server rendering. Unlike other hooks, creation hooks are also run during server-side rendering.
+          
+          1. beforeCreate: This hook runs at the very initialization of your component. hook observes data and initialization events in your component. Here, data is still not reactive and events that occur during the component’s lifecycle have not been set up yet.
 
-		<span dir="ltr" align="left">
+          <span dir="ltr" align="left">
 
 
-		```javascript
-			new Vue({
-			data: {
-			count: 10
-			},
-			beforeCreate: function () {
-				console.log('Nothing gets called at this moment')
-				// `this` points to the view model instance
-				console.log('count is ' + this.count);
-			}
-			})
-			// count is undefined
-		```
+          ```javascript
+               new Vue({
+               data: {
+               count: 10
+               },
+               beforeCreate: function () {
+                    console.log('Nothing gets called at this moment')
+                    // `this` points to the view model instance
+                    console.log('count is ' + this.count);
+               }
+               })
+               // count is undefined
+          ```
 
-		</span>
+          </span>
     
-		2. created: This hook is invoked when Vue has set up events and data observation. Here, events are active and access to reactive data is enabled though templates have not yet been mounted or rendered.
+          2. created: This hook is invoked when Vue has set up events and data observation. Here, events are active and access to reactive data is enabled though templates have not yet been mounted or rendered.
         
        
    
-		<span dir="ltr" align="left">
+          <span dir="ltr" align="left">
 
-		```javascript
-			new Vue({
-			data: {
-			count: 10
-			},
-			created: function () {
-			// `this` points to the view model instance
-			console.log('count is: ' + this.count)
-			}
-			})
-			// count is: 10
-		```
+          ```javascript
+               new Vue({
+               data: {
+               count: 10
+               },
+               created: function () {
+               // `this` points to the view model instance
+               console.log('count is: ' + this.count)
+               }
+               })
+               // count is: 10
+          ```
 
-		</span>
+          </span>
 
         **نکته:** Remember that, You will not have access to the DOM or the target mounting element (this.$el) inside of creation hooks
         
-	2. **Mounting(DOM Insertion):** Mounting hooks are often the most-used hooks and they allow you to access your component immediately before and after the first render.
+     2. **Mounting(DOM Insertion):** Mounting hooks are often the most-used hooks and they allow you to access your component immediately before and after the first render.
 
-		1. beforeMount: The beforeMount allows you to access your component immediately before and after the first render.
+          1. beforeMount: The beforeMount allows you to access your component immediately before and after the first render.
 
-		<span dir="ltr" align="left">
+          <span dir="ltr" align="left">
 
-		```javascript
-		new Vue({
-			beforeMount: function () {
-				// `this` points to the view model instance
-				console.log(`this.$el is yet to be created`);
-			}
-		})
-		```
+          ```javascript
+          new Vue({
+               beforeMount: function () {
+                    // `this` points to the view model instance
+                    console.log(`this.$el is yet to be created`);
+               }
+          })
+          ```
 
-		</span>
+          </span>
 
-		2. mounted: This is a most used hook and you will have full access to the reactive component, templates, and rendered DOM (via. this.$el).  The most frequently used patterns are fetching data for your component.
-	
-		<span dir="ltr" align="left">
+          2. mounted: This is a most used hook and you will have full access to the reactive component, templates, and rendered DOM (via. this.$el).  The most frequently used patterns are fetching data for your component.
+     
+          <span dir="ltr" align="left">
 
-		```javascript
-		<div id="app">
-			<p>I’m text inside the component.</p>
-		</div>
-		new Vue({
-			el: ‘#app’,
-			mounted: function() {
-			console.log(this.$el.textContent); // I'm text inside the component.
-			}
-		})
-		```
+          ```javascript
+          <div id="app">
+               <p>I’m text inside the component.</p>
+          </div>
+          new Vue({
+               el: ‘#app’,
+               mounted: function() {
+               console.log(this.$el.textContent); // I'm text inside the component.
+               }
+          })
+          ```
 
-		</span>
+          </span>
 
-	3. **Updating (Diff & Re-render):** Updating hooks are called whenever a reactive property used by your component changes, or something else causes it to re-render
-		
-		1. beforeUpdate: The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.
-	
-		<span dir="ltr" align="left">
+     3. **Updating (Diff & Re-render):** Updating hooks are called whenever a reactive property used by your component changes, or something else causes it to re-render
+          
+          1. beforeUpdate: The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.
+     
+          <span dir="ltr" align="left">
 
-		```javascript
-		<div id="app">
-			<p>{{counter}}</p>
-		</div>
-	
-		// ...rest of the code
+          ```javascript
+          <div id="app">
+               <p>{{counter}}</p>
+          </div>
+     
+          // ...rest of the code
 
-		new Vue({
-			el: '#app',
-			data() {
-				return {
-					counter: 0
-				}
-			},
-			created: function() {
-				setInterval(() => {
-					this.counter++
-				}, 1000)
-			},
+          new Vue({
+               el: '#app',
+               data() {
+                    return {
+                         counter: 0
+                    }
+               },
+               created: function() {
+                    setInterval(() => {
+                         this.counter++
+                    }, 1000)
+               },
 
-			beforeUpdate: function() {
-				console.log(this.counter) // Logs the counter value every second, before the DOM updates.
-			}
-		})
-		```
+               beforeUpdate: function() {
+                    console.log(this.counter) // Logs the counter value every second, before the DOM updates.
+               }
+          })
+          ```
 
-		</span>
+          </span>
 
-		2. updated: This hook runs after data changes on your component and the DOM re-renders.
+          2. updated: This hook runs after data changes on your component and the DOM re-renders.
    
-     	<span dir="ltr" align="left">
+          <span dir="ltr" align="left">
 
-		```javascript
-		<div id="app">
-			<p ref="dom">{{counter}}</p>
-		</div>
-		
-		// ...
+          ```javascript
+          <div id="app">
+               <p ref="dom">{{counter}}</p>
+          </div>
+          
+          // ...
 
-		new Vue({
-			el: '#app',
-			data() {
-				return {
-					counter: 0
-				}
-			},
-			created: function() {
-				setInterval(() => {
-					this.counter++
-				}, 1000)
-			},
-			updated: function() {
-				console.log(+this.$refs['dom'].textContent === this.counter) // Logs true every second
-			}
-		})
-		```
+          new Vue({
+               el: '#app',
+               data() {
+                    return {
+                         counter: 0
+                    }
+               },
+               created: function() {
+                    setInterval(() => {
+                         this.counter++
+                    }, 1000)
+               },
+               updated: function() {
+                    console.log(+this.$refs['dom'].textContent === this.counter) // Logs true every second
+               }
+          })
+          ```
 
-		</span>
+          </span>
 
-	4. **Destruction (Teardown):**
-	Destruction hooks allow you to perform actions when your component is destroyed, such as cleanup or analytics sending.
-	
-		1. beforeDestroy: `beforeDestroy` is fired right before teardown. If you need to cleanup events or reactive subscriptions, beforeDestroy would probably be the time to do it. Your component will still be fully present and functional.
+     4. **Destruction (Teardown):**
+     Destruction hooks allow you to perform actions when your component is destroyed, such as cleanup or analytics sending.
+     
+          1. beforeDestroy: `beforeDestroy` is fired right before teardown. If you need to cleanup events or reactive subscriptions, beforeDestroy would probably be the time to do it. Your component will still be fully present and functional.
    
-		<span dir="ltr" align="left">
+          <span dir="ltr" align="left">
 
-		```javascript
-		new Vue ({
-			data() {
-			return {
-			message: 'Welcome VueJS developers'
-			}
-			},
+          ```javascript
+          new Vue ({
+               data() {
+               return {
+               message: 'Welcome VueJS developers'
+               }
+               },
 
-			beforeDestroy: function() {
-			this.message = null
-			delete this.message
-			}
-		})
-		```
+               beforeDestroy: function() {
+               this.message = null
+               delete this.message
+               }
+          })
+          ```
 
-		</span>
+          </span>
 
-     	2. destroyed: This hooks is called after your component has been destroyed, its directives have been unbound and its event listeners have been removed.
+          2. destroyed: This hooks is called after your component has been destroyed, its directives have been unbound and its event listeners have been removed.
    
-		<span dir="ltr" align="left">
+          <span dir="ltr" align="left">
 
-		```javascript
-		new Vue ({
-			destroyed: function() {
-				console.log(this) // Nothing to show here
-			}
-		})
-		```
+          ```javascript
+          new Vue ({
+               destroyed: function() {
+                    console.log(this) // Nothing to show here
+               }
+          })
+          ```
 
-		</span>
+          </span>
 
-	**[فهرست](#فهرست)**
+     **[فهرست](#فهرست)**
 
 4.  ### What are the conditional directives?
 
-	VueJS provides set of directives to show or hide elements based on conditions. The available directives are: **v-if, v-else, v-else-if and v-show**
+     VueJS provides set of directives to show or hide elements based on conditions. The available directives are: **v-if, v-else, v-else-if and v-show**
 
-	**1. v-if:**  The v-if directive adds or removes DOM elements based on the given expression. For example, the below button will not show if isLoggedIn is set to false.
-	
-	<span dir="ltr" align="left">
-	
-	```javascript
-	<button v-if="isLoggedIn">Logout</button>
-	```
-
-	</span>
-
-	You can also control multiple elements with a single v-if statement by wrapping all the elements in a `<template>` element with the condition. For example, you can have both label and button together conditionally applied,
-	
-	<span dir="ltr" align="left">
-
-	```javascript
-	<template v-if="isLoggedIn">
-		<label> Logout </button>
-		<button> Logout </button>
-	</template>
-	```
-
-	</span>
-
-	**2. v-else:**  This directive is used to display content only when the expression adjacent v-if resolves to false. This is similar to else block in any programming language to display alternative content and it is preceded by v-if or v-else-if block. You don't need to pass any value to this.
-	For example, v-else is used to display LogIn button if isLoggedIn is set to false(not logged in).
-	
-	<span dir="ltr" align="left">
-
-	```javascript
-	<button v-if="isLoggedIn"> Logout </button>
-	<button v-else> Log In </button>
-	```
-
-	</span>
-
-	**3. v-else-if:** This directive is used when we need more than two options to be checked.
-	For example, we want to display some text instead of LogIn button when ifLoginDisabled property is set to true. This can be achieved through v-else statement.
-	
-	<span dir="ltr" align="left">
-
-	```javascript
-	<button v-if="isLoggedIn"> Logout </button>
-	<label v-else-if="isLoginDisabled"> User login disabled </label>
-	<button v-else> Log In </button>
-	```
-
-	</span>
-
-	**4. v-show:** This directive is similar to v-if but it renders all elements to the DOM and then uses the CSS display property to show/hide elements. This directive is recommended if the elements are switched on and off frequently.
-	
-	<span dir="ltr" align="left">
-
-	```javascript
-	<span v-show="user.name">Welcome user,{{user.name}}</span>
-	```
-
-	</span>
-
-	**[فهرست](#فهرست)**
-
-5.  ### What is the difference between v-show and v-if directives?
-
-	Below are some of the main differences between **v-show** and **v-if** directives,
-
-	1. v-if only renders the element to the DOM if the expression passes whereas v-show renders all elements to the DOM and then uses the CSS display property to show/hide elements based on expression.
-	2. v-if supports v-else and v-else-if directives whereas v-show doesn't support else directives.
-	3. v-if has higher toggle costs while v-show has higher initial render costs. i.e, v-show has a performance advantage if the elements are switched on and off frequently, while the v-if has the advantage when it comes to initial render time.
-	4. v-if supports `<template>` tab but v-show doesn't support.
-
-	**[فهرست](#فهرست)**
-
-6.  ### What is the purpose of v-for directive?
-
-	The built-in v-for directive allows us to loop through items in an array or object. You can iterate on each element in the array or object.
-
-	1. **Array usage:**
-
-	<span dir="ltr" align="left">
-
-	```javascript
-	<ul id="list">
-		<li v-for="(item, index) in items">
-		{{ index }} - {{ item.message }}
-		</li>
-	</ul>
-
-	var vm = new Vue({
-		el: '#list',
-		data: {
-			items: [
-				{ message: 'John' },
-				{ message: 'Locke' }
-			]
-		}
-	})
-	```
-
-	</span>
-
-	You can also use `of` as the delimiter instead of `in`, similar to javascript iterators.
-
-	2. **Object usage:**
-
-	<span dir="ltr" align="left">
-	
-	```javascript
-	<div id="object">
-		<div v-for="(value, key, index) of user">
-		{{ index }}. {{ key }}: {{ value }}
-		</div>
-	</div>
-
-	var vm = new Vue({
-		el: '#object',
-		data: {
-			user: {
-				firstName: 'John',
-				lastName: 'Locke',
-				age: 30
-			}
-		}
-	})
-	```
-
-	</span>
-
-	**[فهرست](#فهرست)**
-
-7.  ### What is vue instance?
-
-	Every Vue application works by creating a new Vue instance with the Vue function. Generally the variable vm (short for ViewModel) is used to refer Vue instance. You can create vue instance as below,
-	
-	<span dir="ltr" align="left">
-
-	```javascript
-	var vm = new Vue({
-		// options
-	})
-	```
-
-	</span>
-
-	As mentioned in the above code snippets, you need to pass options object. You can find the full list of options in the API reference.
-
-	**[فهرست](#فهرست)**
-
-8.  ### How do you achieve conditional group of elements?
-
-	You can achieve conditional group of elements(toggle multiple elements at a time) by applying **v-if** directive on `<template>` element which works as invisible wrapper(no rendering) for group of elements.
-
-	For example, you can conditionally group user details based on valid user condition.
-	
-	<span dir="ltr" align="left">
-
-	```javascript
-	<template v-if="condition">
-		<h1>Name</h1>
-		<p>Address</p>
-		<p>Contact Details</p>
-	</template>
-	```
-
-	</span>
-
-	**[فهرست](#فهرست)**
-
-9.  ### How do you reuse elements with key attribute?
-
-	Vue always tries to render elements as efficient as possible. So it tries to reuse the elements instead of building them from scratch. But this behavior may cause problems in few scenarios.
-
-	For example, if you try to render the same input element in both `v-if` and `v-else` blocks then it holds the previous value as below,
-	
-	<span dir="ltr" align="left">
-
-	```javascript
-	<template v-if="loginType === 'Admin'">
-		<label>Admin</label>
-		<input placeholder="Enter your ID">
-	</template>
-	<template v-else>
-		<label>Guest</label>
-		<input placeholder="Enter your name">
-	</template>
-	```
-
-	</span>
-
-	In this case, it shouldn't reuse. We can make both input elements as separate by applying **key** attribute as below,
-	
-	<span dir="ltr" align="left">
-	
-	```javascript
-	<template v-if="loginType === 'Admin'">
-	<label>Admin</label>
-	<input placeholder="Enter your ID" key="admin-id">
-	</template>
-	<template v-else>
-	<label>Guest</label>
-	<input placeholder="Enter your name" key="user-name">
-	</template>
-	```
-
-	</span>
-
-	The above code make sure both inputs are independent and doesn't impact each other.
-
-	**[فهرست](#فهرست)**
-
-10. ### Why should not use if and for directives together on the same element?
-
-	It is recommended not to use v-if on the same element as v-for. Because v-for directive has a higher priority than v-if.
-	There are two cases where developers try to use this combination,
-
-     1. To filter items in a list
-	For example, if you try to filter the list using v-if tag,
-  
+     **1. v-if:**  The v-if directive adds or removes DOM elements based on the given expression. For example, the below button will not show if isLoggedIn is set to false.
+     
      <span dir="ltr" align="left">
-
+     
      ```javascript
-	<ul>
-		<li
-			v-for="user in users"
-			v-if="user.isActive"
-			:key="user.id"
-		>
-		{{ user.name }}
-		<li>
-	</ul>
-	```
+     <button v-if="isLoggedIn">Logout</button>
+     ```
 
      </span>
 
-	This can be avoided by preparing the filtered list using computed property on the initial list
+     You can also control multiple elements with a single v-if statement by wrapping all the elements in a `<template>` element with the condition. For example, you can have both label and button together conditionally applied,
+     
+     <span dir="ltr" align="left">
+
+     ```javascript
+     <template v-if="isLoggedIn">
+          <label> Logout </button>
+          <button> Logout </button>
+     </template>
+     ```
+
+     </span>
+
+     **2. v-else:**  This directive is used to display content only when the expression adjacent v-if resolves to false. This is similar to else block in any programming language to display alternative content and it is preceded by v-if or v-else-if block. You don't need to pass any value to this.
+     For example, v-else is used to display LogIn button if isLoggedIn is set to false(not logged in).
+     
+     <span dir="ltr" align="left">
+
+     ```javascript
+     <button v-if="isLoggedIn"> Logout </button>
+     <button v-else> Log In </button>
+     ```
+
+     </span>
+
+     **3. v-else-if:** This directive is used when we need more than two options to be checked.
+     For example, we want to display some text instead of LogIn button when ifLoginDisabled property is set to true. This can be achieved through v-else statement.
+     
+     <span dir="ltr" align="left">
+
+     ```javascript
+     <button v-if="isLoggedIn"> Logout </button>
+     <label v-else-if="isLoginDisabled"> User login disabled </label>
+     <button v-else> Log In </button>
+     ```
+
+     </span>
+
+     **4. v-show:** This directive is similar to v-if but it renders all elements to the DOM and then uses the CSS display property to show/hide elements. This directive is recommended if the elements are switched on and off frequently.
+     
+     <span dir="ltr" align="left">
+
+     ```javascript
+     <span v-show="user.name">Welcome user,{{user.name}}</span>
+     ```
+
+     </span>
+
+     **[فهرست](#فهرست)**
+
+5.  ### What is the difference between v-show and v-if directives?
+
+     Below are some of the main differences between **v-show** and **v-if** directives,
+
+     1. v-if only renders the element to the DOM if the expression passes whereas v-show renders all elements to the DOM and then uses the CSS display property to show/hide elements based on expression.
+     2. v-if supports v-else and v-else-if directives whereas v-show doesn't support else directives.
+     3. v-if has higher toggle costs while v-show has higher initial render costs. i.e, v-show has a performance advantage if the elements are switched on and off frequently, while the v-if has the advantage when it comes to initial render time.
+     4. v-if supports `<template>` tab but v-show doesn't support.
+
+     **[فهرست](#فهرست)**
+
+6.  ### What is the purpose of v-for directive?
+
+     The built-in v-for directive allows us to loop through items in an array or object. You can iterate on each element in the array or object.
+
+     1. **Array usage:**
+
+     <span dir="ltr" align="left">
+
+     ```javascript
+     <ul id="list">
+          <li v-for="(item, index) in items">
+          {{ index }} - {{ item.message }}
+          </li>
+     </ul>
+
+     var vm = new Vue({
+          el: '#list',
+          data: {
+               items: [
+                    { message: 'John' },
+                    { message: 'Locke' }
+               ]
+          }
+     })
+     ```
+
+     </span>
+
+     You can also use `of` as the delimiter instead of `in`, similar to javascript iterators.
+
+     2. **Object usage:**
+
+     <span dir="ltr" align="left">
+     
+     ```javascript
+     <div id="object">
+          <div v-for="(value, key, index) of user">
+          {{ index }}. {{ key }}: {{ value }}
+          </div>
+     </div>
+
+     var vm = new Vue({
+          el: '#object',
+          data: {
+               user: {
+                    firstName: 'John',
+                    lastName: 'Locke',
+                    age: 30
+               }
+          }
+     })
+     ```
+
+     </span>
+
+     **[فهرست](#فهرست)**
+
+7.  ### What is vue instance?
+
+     Every Vue application works by creating a new Vue instance with the Vue function. Generally the variable vm (short for ViewModel) is used to refer Vue instance. You can create vue instance as below,
+     
+     <span dir="ltr" align="left">
+
+     ```javascript
+     var vm = new Vue({
+          // options
+     })
+     ```
+
+     </span>
+
+     As mentioned in the above code snippets, you need to pass options object. You can find the full list of options in the API reference.
+
+     **[فهرست](#فهرست)**
+
+8.  ### How do you achieve conditional group of elements?
+
+     You can achieve conditional group of elements(toggle multiple elements at a time) by applying **v-if** directive on `<template>` element which works as invisible wrapper(no rendering) for group of elements.
+
+     For example, you can conditionally group user details based on valid user condition.
+     
+     <span dir="ltr" align="left">
+
+     ```javascript
+     <template v-if="condition">
+          <h1>Name</h1>
+          <p>Address</p>
+          <p>Contact Details</p>
+     </template>
+     ```
+
+     </span>
+
+     **[فهرست](#فهرست)**
+
+9.  ### How do you reuse elements with key attribute?
+
+     Vue always tries to render elements as efficient as possible. So it tries to reuse the elements instead of building them from scratch. But this behavior may cause problems in few scenarios.
+
+     For example, if you try to render the same input element in both `v-if` and `v-else` blocks then it holds the previous value as below,
+     
+     <span dir="ltr" align="left">
+
+     ```javascript
+     <template v-if="loginType === 'Admin'">
+          <label>Admin</label>
+          <input placeholder="Enter your ID">
+     </template>
+     <template v-else>
+          <label>Guest</label>
+          <input placeholder="Enter your name">
+     </template>
+     ```
+
+     </span>
+
+     In this case, it shouldn't reuse. We can make both input elements as separate by applying **key** attribute as below,
+     
+     <span dir="ltr" align="left">
+     
+     ```javascript
+     <template v-if="loginType === 'Admin'">
+     <label>Admin</label>
+     <input placeholder="Enter your ID" key="admin-id">
+     </template>
+     <template v-else>
+     <label>Guest</label>
+     <input placeholder="Enter your name" key="user-name">
+     </template>
+     ```
+
+     </span>
+
+     The above code make sure both inputs are independent and doesn't impact each other.
+
+     **[فهرست](#فهرست)**
+
+10. ### Why should not use if and for directives together on the same element?
+
+     It is recommended not to use v-if on the same element as v-for. Because v-for directive has a higher priority than v-if.
+     There are two cases where developers try to use this combination,
+
+     1. To filter items in a list
+     For example, if you try to filter the list using v-if tag,
   
      <span dir="ltr" align="left">
 
      ```javascript
-	computed: {
-		activeUsers: function () {
-		return this.users.filter(function (user) {
-		return user.isActive
-		})
-		}
-	}
-	// ...... 
-	// ...... 
-	<ul>
-		<li
-		v-for="user in activeUsers"
-		:key="user.id">
-		{{ user.name }}
-		<li>
-	</ul>
-	```
+     <ul>
+          <li
+               v-for="user in users"
+               v-if="user.isActive"
+               :key="user.id"
+          >
+          {{ user.name }}
+          <li>
+     </ul>
+     ```
+
+     </span>
+
+     This can be avoided by preparing the filtered list using computed property on the initial list
+  
+     <span dir="ltr" align="left">
+
+     ```javascript
+     computed: {
+          activeUsers: function () {
+          return this.users.filter(function (user) {
+          return user.isActive
+          })
+          }
+     }
+     // ...... 
+     // ...... 
+     <ul>
+          <li
+          v-for="user in activeUsers"
+          :key="user.id">
+          {{ user.name }}
+          <li>
+     </ul>
+     ```
 
      </span>
 
      2. To avoid rendering a list if it should be hidden
-	For example, if you try to conditionally check if the user is to be shown or hidden
+     For example, if you try to conditionally check if the user is to be shown or hidden
 
      <span dir="ltr" align="left">
 
      ```javascript
-	<ul>
-		<li
-			v-for="user in users"
-			v-if="shouldShowUsers"
-			:key="user.id"
-		>
-		{{ user.name }}
-		<li>
-	</ul>
-	```
+     <ul>
+          <li
+               v-for="user in users"
+               v-if="shouldShowUsers"
+               :key="user.id"
+          >
+          {{ user.name }}
+          <li>
+     </ul>
+     ```
 
      </span>
 
-	This can be solved by moving the condition to a parent by avoiding this check for each user
+     This can be solved by moving the condition to a parent by avoiding this check for each user
   
      <span dir="ltr" align="left">
 
      ```javascript
-	<ul v-if="shouldShowUsers">
-		<li
-		v-for="user in users"
-		:key="user.id"
-		>
-		{{ user.name }}
-		<li>
-	</ul>
-	```
+     <ul v-if="shouldShowUsers">
+          <li
+          v-for="user in users"
+          :key="user.id"
+          >
+          {{ user.name }}
+          <li>
+     </ul>
+     ```
 
      </span>
 
@@ -873,8 +873,8 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	vm.todos[indexOfTodo] = newTodo
-	```
+     vm.todos[indexOfTodo] = newTodo
+     ```
 
      </span>
 
@@ -883,8 +883,8 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	vm.todos.length = todosLength
-	```
+     vm.todos.length = todosLength
+     ```
 
      </span>
 
@@ -1023,7 +1023,7 @@ puppeteer:
 
      Normally, javascript provides `event.preventDefault() or event.stopPropagation()` inside event handlers. You can use methods provided by vue, but these methods are meant for data logic instead of dealing with DOM events. Vue provides below event modifiers for v-on and these modifiers are directive postfixes denoted by a dot.
      
-	1. .stop
+     1. .stop
      2. .prevent
      3. .capture
      4. .self
@@ -1032,7 +1032,7 @@ puppeteer:
      
      Let's take an example of stop modifier,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```html
      <!-- the click event's propagation will be stopped -->
@@ -1043,7 +1043,7 @@ puppeteer:
 
      You can also chain modifiers as below,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```html
      <!-- modifiers can be chained -->
@@ -1058,9 +1058,9 @@ puppeteer:
 
      Vue supports key modifiers on `v-on` for handling keyboard events. Let's take an example of keyup event with enter keycode.
      
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```html
+     ```html
      <!-- only call `vm.show()` when the `keyCode` is 13 -->
      <input v-on:keyup.13="show">
      ```
@@ -1081,7 +1081,7 @@ puppeteer:
 
      Now the above keyup code snippet can be written with aliases as follows:
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <input v-on:keyup.enter="submit" />
@@ -1125,7 +1125,7 @@ puppeteer:
 
      Lets take an example of control modifier with click event,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <!-- Ctrl + Click -->
@@ -1145,7 +1145,7 @@ puppeteer:
 
      For example, the usage of `.right` modifier as below
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
       <button
@@ -1165,7 +1165,7 @@ puppeteer:
 
      Lets take an example of it using input component:
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <input v-model="message" placeholder="Enter input here">
@@ -1184,20 +1184,20 @@ puppeteer:
 
      **1. lazy:** By default, v-model syncs the input with the data after each input event. You can add the lazy modifier to instead sync after change events.
      
-	<span dir="ltr" align="left">
-	
-	```vue
+     <span dir="ltr" align="left">
+     
+     ```vue
      <!-- synced after "change" instead of "input" -->
      <input v-model.lazy="msg" >
      ```
 
      </span>
-	
+     
      **2. number:** If you want user input to be automatically typecast as a number, you can add the number modifier to your v-model. Even with type="number", the value of HTML input elements always returns a string. So, this typecast modifier is required.
      
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```vue
+     ```vue
      <input v-model.number="age" type="number">
      ```
 
@@ -1205,9 +1205,9 @@ puppeteer:
 
      **3. trim:** If you want whitespace from user input to be trimmed automatically, you can add the trim modifier to your v-model.
      
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```vue
+     ```vue
      <input v-model.trim="msg">
      ```
 
@@ -1255,27 +1255,27 @@ puppeteer:
 
 27.  ### What are props?
 
-	Props are custom attributes you can register on a component. When a value is passed to a prop attribute, it becomes a property on that component instance. You can pass those list of values as props option and use them as similar to data variables in template.
+     Props are custom attributes you can register on a component. When a value is passed to a prop attribute, it becomes a property on that component instance. You can pass those list of values as props option and use them as similar to data variables in template.
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```javascript
-	Vue.component('todo-item', {
-		props: ['title'],
-		template: '<h2>{{ title }}</h2>'
-	})
-	```
+     ```javascript
+     Vue.component('todo-item', {
+          props: ['title'],
+          template: '<h2>{{ title }}</h2>'
+     })
+     ```
 
-	</span>
+     </span>
 
-	Once the props are registered, you can pass them as custom attributes.
+     Once the props are registered, you can pass them as custom attributes.
      
-	
-	<span dir="ltr" align="left">
+     
+     <span dir="ltr" align="left">
 
-	```vue
-	<todo-item title="Learn Vue conceptsnfirst"></todo-item>
-	```
+     ```vue
+     <todo-item title="Learn Vue conceptsnfirst"></todo-item>
+     ```
 
      </span>
 
@@ -1285,9 +1285,9 @@ puppeteer:
 
      In VueJS 2.x, every component must have a single root element **when template has more than one element**. In this case, you need to wrap the elements with a parent element.
      
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```vue
+     ```vue
      <template>
         <div class="todo-item">
             <h2>{{ title }}</h2>
@@ -1298,13 +1298,13 @@ puppeteer:
 
      </span>
      
-	Otherwise there will an error throwing, saying that "Component template should contain exactly one root element...".
+     Otherwise there will an error throwing, saying that "Component template should contain exactly one root element...".
 
      Whereas in 3.x, components now can have multiple root nodes. This way of adding multiple root nodes is called as fragments.
      
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```vue
+     ```vue
      <template>
           <h2>{{ title }}</h2>
           <div v-html="content"></div>
@@ -1340,7 +1340,7 @@ puppeteer:
 
      Now you can use this todo-item in parent component to access the count value.
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <ul v-for="todo in todos">
@@ -1371,22 +1371,22 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	Vue.component('custom-input', {
-		props: ['value'],
-		template: `
-			<input
-			v-bind:value="value"
-			v-on:input="$emit('input', $event.target.value)"
-			/>
-		`
-	})
-	```
+     Vue.component('custom-input', {
+          props: ['value'],
+          template: `
+               <input
+               v-bind:value="value"
+               v-on:input="$emit('input', $event.target.value)"
+               />
+          `
+     })
+     ```
 
      </span>
 
      Now you can use `v-model` with this component,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
       ```vue
       <custom-input v-model="searchInput"></custom-input>
@@ -1419,7 +1419,7 @@ puppeteer:
 
      Now you can insert dynamic content as below:
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <alert>
@@ -1463,7 +1463,7 @@ puppeteer:
 
      The above components can be used in the vue instance:
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <div id="app">
@@ -1474,7 +1474,7 @@ puppeteer:
      ```
 
      </span>
-	
+     
      Remember that the components can be used in subcomponents as well.
 
      **[فهرست](#فهرست)**
@@ -1488,27 +1488,27 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	var ComponentA = { /* ... */ }
-	var ComponentB = { /* ... */ }
-	var ComponentC = { /* ... */ }
-	```
+     var ComponentA = { /* ... */ }
+     var ComponentB = { /* ... */ }
+     var ComponentC = { /* ... */ }
+     ```
 
      </span>
 
-	Locally registered components will not be available in sub components. In this case, you need to add them in components section
+     Locally registered components will not be available in sub components. In this case, you need to add them in components section
     
      <span dir="ltr" align="left">
 
      ```javascript
-	var ComponentA = { /* ... */ }
+     var ComponentA = { /* ... */ }
 
-	var ComponentB = {
-		components: {
-		'component-a': ComponentA
-		},
-		// ...
-	}
-	```
+     var ComponentB = {
+          components: {
+          'component-a': ComponentA
+          },
+          // ...
+     }
+     ```
 
      </span>
 
@@ -1629,18 +1629,18 @@ puppeteer:
      The possible mutation cases can be solved as below:
 
      1. When you try to use parent prop as initial value for child property:
-	In this case you can define a local property in child component and assign parent value as initial value
+     In this case you can define a local property in child component and assign parent value as initial value
     
      <span dir="ltr" align="left">
 
      ```javascript
-	props: ['defaultUser'],
-	data: function () {
-		return {
-		username: this.defaultUser
-		}
-	}
-	```
+     props: ['defaultUser'],
+     data: function () {
+          return {
+          username: this.defaultUser
+          }
+     }
+     ```
 
      </span>
 
@@ -1649,13 +1649,13 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	props: ['environment'],
-	computed: {
-		localEnvironment: function () {
-		return this.environment.trim().toUpperCase()
-		}
-	}
-	```
+     props: ['environment'],
+     computed: {
+          localEnvironment: function () {
+          return this.environment.trim().toUpperCase()
+          }
+     }
+     ```
 
      </span>
 
@@ -1667,7 +1667,7 @@ puppeteer:
 
      For example, If you are using a 3rd-party custom-input component that requires a `data-tooltip` attribute on the input then you can add this attribute to component instance,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <custom-input data-tooltip="Enter your input" />
@@ -1677,7 +1677,7 @@ puppeteer:
 
      If you try to pass the props from parent component the child props with the same names will be overridden. But props like `class` and `style` are exception to this, these values will be merged in the child component.
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <!-- Child component -->
@@ -1771,7 +1771,7 @@ puppeteer:
 
      Now you can use v-model on this customized component as below,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <custom-checkbox v-model="selectFramework"></custom-checkbox>
@@ -1820,23 +1820,23 @@ puppeteer:
 
      **Step 1:** Configure router link and router view in the template
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```vue
-	<script src="https://unpkg.com/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+     ```vue
+     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
-	<div id="app">
-	<h1>Welcome to Vue routing app!</h1>
-	<p>
-		<!-- use router-link component for navigation using `to` prop. It rendered as an `<a>` tag -->
-		<router-link to="/home">Home</router-link>
-		<router-link to="/services">Services</router-link>
-	</p>
-	<!-- route outlet in which component matched by the route will render here -->
-	<router-view></router-view>
-	</div>
-	```
+     <div id="app">
+     <h1>Welcome to Vue routing app!</h1>
+     <p>
+          <!-- use router-link component for navigation using `to` prop. It rendered as an `<a>` tag -->
+          <router-link to="/home">Home</router-link>
+          <router-link to="/services">Services</router-link>
+     </p>
+     <!-- route outlet in which component matched by the route will render here -->
+     <router-view></router-view>
+     </div>
+     ```
 
      </span>
 
@@ -1846,11 +1846,11 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	import Vue from 'vue';
-	import VueRouter from 'vue-router';
+     import Vue from 'vue';
+     import VueRouter from 'vue-router';
 
-	Vue.use(VueRouter)
-	```
+     Vue.use(VueRouter)
+     ```
 
      </span>
 
@@ -1859,9 +1859,9 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const Home = { template: '<div>Home</div>' }
-	const Services = { template: '<div>Services</div>' }
-	```
+     const Home = { template: '<div>Home</div>' }
+     const Services = { template: '<div>Services</div>' }
+     ```
 
      </span>
 
@@ -1870,11 +1870,11 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const routes = [
-		{ path: '/home', component: Home },
-		{ path: '/services', component: Services }
-	]
-	```
+     const routes = [
+          { path: '/home', component: Home },
+          { path: '/services', component: Services }
+     ]
+     ```
 
      </span>
 
@@ -1883,10 +1883,10 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const router = new VueRouter({
-		routes // short for `routes: routes`
-	})
-	```
+     const router = new VueRouter({
+          routes // short for `routes: routes`
+     })
+     ```
 
      </span>
 
@@ -1895,10 +1895,10 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const app = new Vue({
-		router
-	}).$mount('#app')
-	```
+     const app = new Vue({
+          router
+     }).$mount('#app')
+     ```
 
      </span>
 
@@ -1942,15 +1942,15 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const User = {
-		template: '<div>User {{ $route.params.name }} </div>',
-		watch: {
-			'$route' (to, from) {
-				// react to route changes...
-			}
-		}
-	}
-	```
+     const User = {
+          template: '<div>User {{ $route.params.name }} </div>',
+          watch: {
+               '$route' (to, from) {
+                    // react to route changes...
+               }
+          }
+     }
+     ```
 
      </span>
 
@@ -1959,13 +1959,13 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const User = {
-		template: '<div>User {{ $route.params.name }} </div>',
-		beforeRouteUpdate (to, from, next) {
-			// react to route changes and then call next()
-		}
-	}
-	```
+     const User = {
+          template: '<div>User {{ $route.params.name }} </div>',
+          beforeRouteUpdate (to, from, next) {
+               // react to route changes and then call next()
+          }
+     }
+     ```
 
      </span>
 
@@ -2036,7 +2036,7 @@ puppeteer:
 
      Let's take an example of Singile File Components
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <template>
@@ -2074,7 +2074,7 @@ puppeteer:
 
      For example,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <template>
@@ -2123,7 +2123,7 @@ puppeteer:
 
      Now you can use the filter in either mustache interpolation or v-bind expression,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <!-- in mustaches -->
@@ -2183,7 +2183,7 @@ puppeteer:
 
      You can chain filters one after the other to perform multiple manipulations on the expression. The generic structure of filter chain would be as below:
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      {{ message | filterA | filterB | filterB ... }}
@@ -2194,8 +2194,8 @@ puppeteer:
      In the above chain stack, you can observe that message expression applied with three filters, each separated by a pipe(|) symbol. The first filter(filterA) takes the expression as a single argument and the result of the expression becomes an argument for second filter(filterB) and the chain continue for remaining filters.
 
      For example, if you want to transform date expression with a full date format and uppercase then you can apply dateFormat and uppercase filters as below,
-	
-	<span dir="ltr" align="left">
+     
+     <span dir="ltr" align="left">
 
      ```vue
      {{ birthday | dateFormat | uppercase }}
@@ -2209,7 +2209,7 @@ puppeteer:
 
      Yes, you can pass arguments for a filter similar to a javascript function. The generic structure of filter parameters would be as follows:
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      {{ message | filterA('arg1', arg2) }}
@@ -2221,7 +2221,7 @@ puppeteer:
 
      For example, you can find the exponential strength of a particular value
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      {{ 2 | exponentialStrength(10) }} <!-- prints 2 power 10 = 1024 -->
@@ -2277,7 +2277,7 @@ puppeteer:
           // some logic ...
         }
       }
-	```
+     ```
 
      </span>
 
@@ -2366,25 +2366,25 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	var mixin = {
-		data: function () {
-			return {
-				message: 'Hello, this is a Mixin'
-			}
-		}
-	}
-	new Vue({
-		mixins: [mixin],
-		data: function () {
-			return {
-				message: 'Hello, this is a Component'
-			}
-		},
-		created: function () {
-			console.log(this.$data); // => { message: "Hello, this is a Component'" }
-		}
-	})
-	```
+     var mixin = {
+          data: function () {
+               return {
+                    message: 'Hello, this is a Mixin'
+               }
+          }
+     }
+     new Vue({
+          mixins: [mixin],
+          data: function () {
+               return {
+                    message: 'Hello, this is a Component'
+               }
+          },
+          created: function () {
+               console.log(this.$data); // => { message: "Hello, this is a Component'" }
+          }
+     })
+     ```
 
      </span>
 
@@ -2393,23 +2393,23 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const myMixin = {
-		created(){
-			console.log("Called from Mixin")
-		}
-	}
+     const myMixin = {
+          created(){
+               console.log("Called from Mixin")
+          }
+     }
 
-	new Vue({
-		el: '#root',
-		mixins: [myMixin],
-		created(){
-			console.log("Called from Component")
-		}
-	})
+     new Vue({
+          el: '#root',
+          mixins: [myMixin],
+          created(){
+               console.log("Called from Component")
+          }
+     })
 
-	// Called from Mixin
-	// Called from Component
-	```
+     // Called from Mixin
+     // Called from Component
+     ```
 
      </span>
 
@@ -2418,33 +2418,33 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	var mixin = {
-		methods: {
-			firstName: function () {
-				console.log('John')
-			},
-			contact: function () {
-				console.log('+65 99898987')
-			}
-		}
-	}
+     var mixin = {
+          methods: {
+               firstName: function () {
+                    console.log('John')
+               },
+               contact: function () {
+                    console.log('+65 99898987')
+               }
+          }
+     }
 
-	var vm = new Vue({
-		mixins: [mixin],
-		methods: {
-			lastName: function () {
-				console.log('Murray')
-			},
-			contact: function () {
-				console.log('+91 893839389')
-			}
-		}
-	})
+     var vm = new Vue({
+          mixins: [mixin],
+          methods: {
+               lastName: function () {
+                    console.log('Murray')
+               },
+               contact: function () {
+                    console.log('+91 893839389')
+               }
+          }
+     })
 
-	vm.firstName() // "John"
-	vm.lastName() // "Murray"
-	vm.contact() // "+91 893839389"
-	```
+     vm.firstName() // "John"
+     vm.lastName() // "Murray"
+     vm.contact() // "+91 893839389"
+     ```
 
      </span>
 
@@ -2510,7 +2510,7 @@ puppeteer:
 
      Now you can use v-focus directive on any element as below,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <input v-focus>
@@ -2541,8 +2541,8 @@ puppeteer:
 
      Now you can use v-focus directive on any element as below,
 
-	<span dir="ltr" align="left">
-	
+     <span dir="ltr" align="left">
+     
      ```vue
      <input v-focus>
      ```
@@ -2569,19 +2569,19 @@ puppeteer:
      All the hooks have `el`, `binding`, and `vnode` as arguments. Along with that, **update** and **componentUpdated** hooks expose `oldVnode`, to differentiate between the older value passed and the newer value. Below are the arguments passed to the hooks,
      1. `el`: The element the directive is bound to and it can be used to directly manipulate the DOM.
      2. `binding`: An object containing the following properties.
-		1. `name`: The name of the directive, without the `v-` prefix.
-		2. `value`: The value passed to the directive. For example in `v-my-directive="1 + 1"`, the value would be 2.
-		3. `oldValue`: The previous value, only available in update and componentUpdated. It is available whether or not the value has changed.
-		4. `expression`: The expression of the binding as a string. For example in `v-my-directive="1 + 1"`, the expression would be "1 + 1".
-		5. `arg`: The argument passed to the directive, if any. For example in v-my-directive:foo, the arg would be "foo".
-		6. `modifiers`: An object containing modifiers, if any. For example in v-my-directive.foo.bar, the modifiers object would be `{ foo: true, bar: true }`.
+          1. `name`: The name of the directive, without the `v-` prefix.
+          2. `value`: The value passed to the directive. For example in `v-my-directive="1 + 1"`, the value would be 2.
+          3. `oldValue`: The previous value, only available in update and componentUpdated. It is available whether or not the value has changed.
+          4. `expression`: The expression of the binding as a string. For example in `v-my-directive="1 + 1"`, the expression would be "1 + 1".
+          5. `arg`: The argument passed to the directive, if any. For example in v-my-directive:foo, the arg would be "foo".
+          6. `modifiers`: An object containing modifiers, if any. For example in v-my-directive.foo.bar, the modifiers object would be `{ foo: true, bar: true }`.
 
      3. `vnode`: The virtual node produced by Vue’s compiler.
      4. `oldVnode`: The previous virtual node, only available in the update and componentUpdated hooks.
 
      The arguments can be represented diagrammatically across the hooks as below,
 
-	![custom-directives](images/custom-directives.svg)
+     ![custom-directives](images/custom-directives.svg)
 
      **[فهرست](#فهرست)**
 
@@ -2591,7 +2591,7 @@ puppeteer:
 
      Let's pass object literal to an avatar directive as below
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```vue
      <div v-avatar="{ width: 500, height: 400, url: 'path/logo', text: 'Iron Man' }"></div>
@@ -2645,9 +2645,9 @@ puppeteer:
      Let's take an example of simple Div markup and corresponding render function.
      The HTML markup can be written in template tag as below,
      
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
-	```vue
+     ```vue
      <template>
        <div :class="{'is-rounded': isRounded}">
          <p>Welcome to Vue render functions</p>
@@ -2792,13 +2792,13 @@ puppeteer:
 
      Let's list down them in a table for comparision,
 
-	| Templates | Render function |
-	|---- | --------- |
-	| Conditional and looping directives: v-if and v-for  | Use JavaScript’s if/else and map concepts|
-	| Two-way binding: v-model  | Apply own JS logic with value binding and event binding |
-	| Capture Event modifiers: .passive, .capture, .once and .capture.once or .once.capture| &, !, ~ and ~! |
-	| Event and key modifiers: .stop, .prevent, .self, keys(.enter, .13) and Modifiers Keys(.ctrl, .alt, .shift, .meta) | Use javascript solutions: event.stopPropagation(), event.preventDefault(), if (event.target !== event.currentTarget) return, if (event.keyCode !== 13) return and if (!event.ctrlKey) return |
-	| Slots: slot attributes | Render functions provide this.$slots and this.$scopedSlots instance properties|
+     | Templates | Render function |
+     |---- | --------- |
+     | Conditional and looping directives: v-if and v-for  | Use JavaScript’s if/else and map concepts|
+     | Two-way binding: v-model  | Apply own JS logic with value binding and event binding |
+     | Capture Event modifiers: .passive, .capture, .once and .capture.once or .once.capture| &, !, ~ and ~! |
+     | Event and key modifiers: .stop, .prevent, .self, keys(.enter, .13) and Modifiers Keys(.ctrl, .alt, .shift, .meta) | Use javascript solutions: event.stopPropagation(), event.preventDefault(), if (event.target !== event.currentTarget) return, if (event.keyCode !== 13) return and if (!event.ctrlKey) return |
+     | Slots: slot attributes | Render functions provide this.$slots and this.$scopedSlots instance properties|
 
      **[فهرست](#فهرست)**
 
@@ -2849,13 +2849,13 @@ puppeteer:
 
      Let's list down them in a table format.
 
-	| Feature | VueJS | ReactJS |
-	|---- | --------- | ---- |
-	| Type |  JavaScript MVC Framework | JavaScript Library |
-	| Platform  | Primarily focused on web development | Both Web and Native |
-	| Learning Curve | Easy to learn the framework  | A steep learning curve and requires deep knowledge |
-	| Simplicity | Vue is simpler than React | React is more complex than Vue |
-	| Bootstrap Application | Vue-cli | CRA (Create React App) |
+     | Feature | VueJS | ReactJS |
+     |---- | --------- | ---- |
+     | Type |  JavaScript MVC Framework | JavaScript Library |
+     | Platform  | Primarily focused on web development | Both Web and Native |
+     | Learning Curve | Easy to learn the framework  | A steep learning curve and requires deep knowledge |
+     | Simplicity | Vue is simpler than React | React is more complex than Vue |
+     | Bootstrap Application | Vue-cli | CRA (Create React App) |
 
       **[فهرست](#فهرست)**
 
@@ -2884,15 +2884,15 @@ puppeteer:
 
      But there are many differences between VueJS and Angular as listed,
 
-	| Feature | VueJS | Angular |
-	|---- | --------- | ---- |
-	| Complexity | Easy to learn, simple API and design | The framework is bit huge and need some learning curve on typescript etc |
-	| Binding of Data  | One-way binding | Two-way binding |
-	| Learning Curve | Easy to learn the framework | A steep learning curve and requires deep knowledge |
-	| Founders | Created by Former Google Employee | Powered by Google |
-	| Initial Release | February 2014 | September 2016 |
-	| Model | Based on Virtual DOM(Document Object Model) | Based on MVC(Model-View-Controller) |
-	| Written in | JavaScript | TypeScript |
+     | Feature | VueJS | Angular |
+     |---- | --------- | ---- |
+     | Complexity | Easy to learn, simple API and design | The framework is bit huge and need some learning curve on typescript etc |
+     | Binding of Data  | One-way binding | Two-way binding |
+     | Learning Curve | Easy to learn the framework | A steep learning curve and requires deep knowledge |
+     | Founders | Created by Former Google Employee | Powered by Google |
+     | Initial Release | February 2014 | September 2016 |
+     | Model | Based on Virtual DOM(Document Object Model) | Based on MVC(Model-View-Controller) |
+     | Written in | JavaScript | TypeScript |
 
      **[فهرست](#فهرست)**
 
@@ -2928,7 +2928,7 @@ puppeteer:
 
      Now you can use the dynamic component which holds the current page,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```html
      <div id="app">
@@ -3176,12 +3176,12 @@ puppeteer:
 
      Below are the list of different builds of VueJS based on type of build,
 
-	| Type | UMD | CommonJS | ES Module (for bundlers) | ES Module (for browsers) |
-	|---- | --------- | ---- | ---- | --- |
-	| Full | vue.js | vue.common.js | vue.esm.js | vue.esm.browser.js |
-	| Runtime only  | vue.runtime.js | vue.runtime.common.js | vue.runtime.esm.js | NA |
-	| Full (production) | vue.min.js | NA | NA | vue.esm.browser.min.js |
-	| Runtime-only (production) | vue.runtime.min.js | NA | NA | NA |
+     | Type | UMD | CommonJS | ES Module (for bundlers) | ES Module (for browsers) |
+     |---- | --------- | ---- | ---- | --- |
+     | Full | vue.js | vue.common.js | vue.esm.js | vue.esm.browser.js |
+     | Runtime only  | vue.runtime.js | vue.runtime.common.js | vue.runtime.esm.js | NA |
+     | Full (production) | vue.min.js | NA | NA | vue.esm.browser.min.js |
+     | Runtime-only (production) | vue.runtime.min.js | NA | NA | NA |
 
      **[فهرست](#فهرست)**
 
@@ -3193,15 +3193,15 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	module.exports = {
-		// ...
-		resolve: {
-			alias: {
-			'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
-			}
-		}
-	}
-	```
+     module.exports = {
+          // ...
+          resolve: {
+               alias: {
+               'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' for webpack 1
+               }
+          }
+     }
+     ```
 
      </span>
 
@@ -3434,25 +3434,25 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	new Vue({
-		// state
-		data () {
-			return {
-				count: 0
-			}
-		},
-		// view
-		template: `
-			<div>{{ count }}</div>
-		`,
-		// actions
-		methods: {
-			increment () {
-				this.count++
-			}
-		}
-	})
-	```
+     new Vue({
+          // state
+          data () {
+               return {
+                    count: 0
+               }
+          },
+          // view
+          template: `
+               <div>{{ count }}</div>
+          `,
+          // actions
+          methods: {
+               increment () {
+                    this.count++
+               }
+          }
+     })
+     ```
 
      </span>
 
@@ -3745,30 +3745,30 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	// webpack.config.js
-	{
-		module: {
-			rules: [
-				// ... other rules omitted
-				{
-					test: /\.css$/,
-					use: [
-						'vue-style-loader',
-						{
-							loader: 'css-loader',
-							options: {
-								// enable CSS Modules
-								modules: true,
-								// customize generated class names
-								localIdentName: '[local]_[hash:base64:8]'
-							}
-						}
-					]
-				}
-			]
-		}
-	}
-	```
+     // webpack.config.js
+     {
+          module: {
+               rules: [
+                    // ... other rules omitted
+                    {
+                         test: /\.css$/,
+                         use: [
+                              'vue-style-loader',
+                              {
+                                   loader: 'css-loader',
+                                   options: {
+                                        // enable CSS Modules
+                                        modules: true,
+                                        // customize generated class names
+                                        localIdentName: '[local]_[hash:base64:8]'
+                                   }
+                              }
+                         ]
+                    }
+               ]
+          }
+     }
+     ```
 
      </span>
 
@@ -3777,12 +3777,12 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	<style module>
-	.customStyle {
-		background: blue;
-	}
-	</style>
-	```
+     <style module>
+     .customStyle {
+          background: blue;
+     }
+     </style>
+     ```
 
      </span>
      3. **Inject CSS modules:** You can inject CSS modules object with computed property $style
@@ -3790,12 +3790,12 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	<template>
-		<div :class="$style.blue">
-		Background color should be in blue
-		</p>
-	</template>
-	```
+     <template>
+          <div :class="$style.blue">
+          Background color should be in blue
+          </p>
+     </template>
+     ```
 
      </span>
 
@@ -4313,28 +4313,28 @@ puppeteer:
 
      By proper mocking, you can bundle tests with webpack and run them on node without having depenceny on Browser API.  It involves 2 steps,
      1. **Create webpack config:** Create webpack config with proper .babelrc
-	
-	<span dir="ltr" align="left">
+     
+     <span dir="ltr" align="left">
 
-	```javascript
-	// webpack.config.js
-	module.exports = {
-		entry: './test.js',
-		output: {
-			path: __dirname,
-			filename: 'test-bundle.js'
-		},
-		module: {
-			loaders: [
-				{
-					test: /\.js$/,
-					loader: 'babel-loader',
-					exclude: /node_modules/
-				}
-			]
-		}
-	}
-	```
+     ```javascript
+     // webpack.config.js
+     module.exports = {
+          entry: './test.js',
+          output: {
+               path: __dirname,
+               filename: 'test-bundle.js'
+          },
+          module: {
+               loaders: [
+                    {
+                         test: /\.js$/,
+                         loader: 'babel-loader',
+                         exclude: /node_modules/
+                    }
+               ]
+          }
+     }
+     ```
 
      </span>
 
@@ -4343,9 +4343,9 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	webpack
-	mocha test-bundle.js
-	```
+     webpack
+     mocha test-bundle.js
+     ```
 
      </span>
 
@@ -4483,9 +4483,9 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	import Vuex from "vuex";
-	Vue.use(Vuex)
-	```
+     import Vuex from "vuex";
+     Vue.use(Vuex)
+     ```
 
      </span>
 
@@ -4494,19 +4494,19 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	// Make sure to call Vue.use(Vuex) first if using a module system
+     // Make sure to call Vue.use(Vuex) first if using a module system
 
-	const store = new Vuex.Store({
-		state: {
-			count: 0
-		},
-		mutations: {
-			increment (state) {
-				state.count++
-			}
-		}
-	})
-	```
+     const store = new Vuex.Store({
+          state: {
+               count: 0
+          },
+          mutations: {
+               increment (state) {
+                    state.count++
+               }
+          }
+     })
+     ```
 
      </span>
 
@@ -4515,10 +4515,10 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	store.commit('increment')
+     store.commit('increment')
 
-	console.log(store.state.count) // -> 1
-	```
+     console.log(store.state.count) // -> 1
+     ```
 
      </span>
 
@@ -4558,7 +4558,7 @@ puppeteer:
      ```
 
      </span>
-	
+     
      In a module system, you must explicitly install Vuex via Vue.use()
 
      <span dir="ltr" align="left">
@@ -4669,14 +4669,14 @@ puppeteer:
 
      ```javascript
       // let's create a hello world component
-	const Greeting = {
-		template: `<div>{{ greet }}</div>`,
-		computed: {
-			greet () {
-				return this.\$store.state.msg
-			}
-		}
-	}
+     const Greeting = {
+          template: `<div>{{ greet }}</div>`,
+          computed: {
+               greet () {
+                    return this.\$store.state.msg
+               }
+          }
+     }
      ```
 
      </span>
@@ -4985,18 +4985,18 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	Vue.set(stateObject, 'newProperty', 'John')
-	```
+     Vue.set(stateObject, 'newProperty', 'John')
+     ```
 
      </span>
 
-	(یا)
+     (یا)
     
      <span dir="ltr" align="left">
 
      ```javascript
-	state.stateObject = { ...state.stateObject, newProperty: 'John' }
-	```
+     state.stateObject = { ...state.stateObject, newProperty: 'John' }
+     ```
 
      </span>
 
@@ -5303,21 +5303,21 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const moduleOne = {
-		state: { count: 0 },
-		mutations: {
-			increment (state) {
-				state.count++; // Here state refers local module state
-			}
-		},
+     const moduleOne = {
+          state: { count: 0 },
+          mutations: {
+               increment (state) {
+                    state.count++; // Here state refers local module state
+               }
+          },
 
-		getters: {
-			average (state) {
-				return state.count / 2
-			}
-		}
-	}
-	```
+          getters: {
+               average (state) {
+                    return state.count / 2
+               }
+          }
+     }
+     ```
 
      </span>
 
@@ -5326,16 +5326,16 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const moduleOne = {
-		actions: {
-			incrementConditional ({ state, commit, rootState }) {
-				if (state.count < rootState.count) {
-					commit('increment')
-				}
-			}
-		}
-	}
-	```
+     const moduleOne = {
+          actions: {
+               incrementConditional ({ state, commit, rootState }) {
+                    if (state.count < rootState.count) {
+                         commit('increment')
+                    }
+               }
+          }
+     }
+     ```
 
      </span>
 
@@ -5364,11 +5364,11 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const MyReusableModule = {
-		// state
-		// mutations, actions, getters...
-	}
-	```
+     const MyReusableModule = {
+          // state
+          // mutations, actions, getters...
+     }
+     ```
 
      </span>
 
@@ -5434,7 +5434,7 @@ puppeteer:
      ```javascript
      <input v-model="username">
      
-	computed: {
+     computed: {
        username: {
          get () {
            return this.$store.state.user.username
@@ -5527,11 +5527,11 @@ puppeteer:
 
      The default preset prompt would be as below,
 
-	<img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/cli-default-presets.png" width="400" height="500">
+     <img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/cli-default-presets.png" width="400" height="500">
 
      and the manual select features would be as below,
 
-	<img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/cli-manual-features.png" width="400" height="500">
+     <img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/cli-manual-features.png" width="400" height="500">
 
      **[فهرست](#فهرست)**
 
@@ -5539,7 +5539,7 @@ puppeteer:
 
      You can also create and manage projects using a graphical interface with the `vue ui` command. Once you apply this command, it opens a browser window with a GUI that guides you through the project creation process.
 
-	<img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/cli-gui.png" width="400" height="500">
+     <img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/cli-gui.png" width="400" height="500">
 
      **[فهرست](#فهرست)**
 
@@ -5699,9 +5699,9 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	# use preset from GitHub repo
-	vue create --preset username/repo my-project
-	```
+     # use preset from GitHub repo
+     vue create --preset username/repo my-project
+     ```
 
      </span>
 
@@ -5793,7 +5793,7 @@ puppeteer:
      ```
 
      </span>
-	
+     
      These observable objects can be used directly in computed properties and render functions.
 
      <span dir="ltr" align="left">
@@ -5931,25 +5931,25 @@ puppeteer:
 
      Apart from the benefits of dynamic directives arguments, it brings two drawbacks or considerations on the usage
      
-	1. **Constraints on expressions:** When you perform complex JavaScript expressions, make sure that html attribute names cannot contain spaces and quotes.
-	
-	The below expression doesn't work as expected
+     1. **Constraints on expressions:** When you perform complex JavaScript expressions, make sure that html attribute names cannot contain spaces and quotes.
+     
+     The below expression doesn't work as expected
    
      <span dir="ltr" align="left">
 
      ```javascript
-	<div :[key + 'unique']="value"></div>
-	```
+     <div :[key + 'unique']="value"></div>
+     ```
 
      </span>
 
-	Instead you may need to use string template syntax
+     Instead you may need to use string template syntax
    
      <span dir="ltr" align="left">
 
      ```javascript
-	<div :[`${key}unique`]="value"></div>
-	```
+     <div :[`${key}unique`]="value"></div>
+     ```
 
      </span>
 
@@ -6023,13 +6023,13 @@ puppeteer:
 
      The output is going to be like this,
 
-	<span dir="ltr" align="left">
+     <span dir="ltr" align="left">
 
      ```html
      <div id="#app">
        <p>Guten Morgen</p>
      </div>
-	```
+     ```
 
      </span>
 
@@ -6043,34 +6043,34 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const messages = {
-		en: {
-		message: {
-		greeting: '{msg} Morning'
-		}
-		}
-	}
-	```
+     const messages = {
+          en: {
+          message: {
+          greeting: '{msg} Morning'
+          }
+          }
+     }
+     ```
 
      </span>
 
-	After that pass argument value along with key in the template
+     After that pass argument value along with key in the template
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>{{ $t('message.greeting', { msg: 'Good' }) }}</p>
-	```
+     <p>{{ $t('message.greeting', { msg: 'Good' }) }}</p>
+     ```
 
      </span>
 
-	It outputs the result as below,
+     It outputs the result as below,
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>Good Morning</p>
-	```
+     <p>Good Morning</p>
+     ```
 
      </span>
 
@@ -6079,44 +6079,44 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const messages = {
-		en: {
-		message: {
-		greeting: '{0} Morning'
-		}
-		}
-	}
-	```
+     const messages = {
+          en: {
+          message: {
+          greeting: '{0} Morning'
+          }
+          }
+     }
+     ```
 
      </span>
 
-	After that pass argument value with in an array
+     After that pass argument value with in an array
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>{{ $t('message.greeting', ['Good']) }}</p>
-	```
+     <p>{{ $t('message.greeting', ['Good']) }}</p>
+     ```
 
      </span>
 
-	Finally it outputs the result as below,
+     Finally it outputs the result as below,
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>Good morning</p>
-	```
+     <p>Good morning</p>
+     ```
 
      </span>
 
-	**نکته:** It also accepts array-like object
+     **نکته:** It also accepts array-like object
 
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>{{ $t('message.greeting', {'0': 'Good'}) }}</p>
-	```
+     <p>{{ $t('message.greeting', {'0': 'Good'}) }}</p>
+     ```
 
      </span>
 
@@ -6125,36 +6125,36 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const messages = {
-		en: {
-		message: {
-		greeting: 'Good <br> Morning'
-		}
-		}
-	}
-	```
+     const messages = {
+          en: {
+          message: {
+          greeting: 'Good <br> Morning'
+          }
+          }
+     }
+     ```
 
      </span>
 
-	After that use it in the html directive template as below
+     After that use it in the html directive template as below
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p v-html="$t('message.greeting')"></p>
-	```
+     <p v-html="$t('message.greeting')"></p>
+     ```
 
      </span>
 
-	Finally it outputs the result as below
+     Finally it outputs the result as below
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>Good
-	<!--<br> exists but is rendered as html and not a string-->
-	Morning</p>
-	```
+     <p>Good
+     <!--<br> exists but is rendered as html and not a string-->
+     Morning</p>
+     ```
 
      </span>
      4. **Ruby on rails format:** First you need to define with percentile and curly braces as below,
@@ -6162,34 +6162,34 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const messages = {
-		en: {
-		message: {
-		greeting: '%{msg} Morning'
-		}
-		}
-	}
-	```
+     const messages = {
+          en: {
+          message: {
+          greeting: '%{msg} Morning'
+          }
+          }
+     }
+     ```
 
      </span>
 
-	After that pass argument with key similar to named formatting
+     After that pass argument with key similar to named formatting
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>{{ $t('message.greeting', { msg: 'Good' }) }}</p>
-	```
+     <p>{{ $t('message.greeting', { msg: 'Good' }) }}</p>
+     ```
 
      </span>
 
-	Finally it renders the output as below,
+     Finally it renders the output as below,
     
      <span dir="ltr" align="left">
 
      ```javascript
-	<p>Good Morning</p>
-	```
+     <p>Good Morning</p>
+     ```
 
      </span>
 
@@ -6294,27 +6294,27 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const dateTimeFormats = {
-		'en-US': {
-			short: {
-				year: 'numeric', month: 'short', day: 'numeric'
-			},
-			long: {
-				year: 'numeric', month: 'short', day: 'numeric',
-				weekday: 'short', hour: 'numeric', minute: 'numeric'
-			}
-		},
-		'ja-JP': {
-			short: {
-				year: 'numeric', month: 'short', day: 'numeric'
-			},
-			long: {
-				year: 'numeric', month: 'short', day: 'numeric',
-				weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: true
-			}
-		}
-	}
-	```
+     const dateTimeFormats = {
+          'en-US': {
+               short: {
+                    year: 'numeric', month: 'short', day: 'numeric'
+               },
+               long: {
+                    year: 'numeric', month: 'short', day: 'numeric',
+                    weekday: 'short', hour: 'numeric', minute: 'numeric'
+               }
+          },
+          'ja-JP': {
+               short: {
+                    year: 'numeric', month: 'short', day: 'numeric'
+               },
+               long: {
+                    year: 'numeric', month: 'short', day: 'numeric',
+                    weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: true
+               }
+          }
+     }
+     ```
 
      </span>
 
@@ -6330,7 +6330,7 @@ puppeteer:
          new Vue({
            i18n
          }).$mount('#app')
-	```
+     ```
 
      </span>
 
@@ -6343,7 +6343,7 @@ puppeteer:
            <p>{{ $d(new Date(), 'short') }}</p>
            <p>{{ $d(new Date(), 'long', 'ja-JP') }}</p>
          </div>
-	```
+     ```
 
      </span>
 
@@ -6356,7 +6356,7 @@ puppeteer:
            <p>May 20, 2019</p>
            <p>2019年5月20日</p>
          </div>
-	```
+     ```
 
      </span>
 
@@ -6369,23 +6369,23 @@ puppeteer:
      Lets follow below steps to localize numbers,
 
      1. You need to add definition formats. For example, lets add it for English and Japanese locales
-	
-	<span dir="ltr" align="left">
+     
+     <span dir="ltr" align="left">
 
-	```javascript
-	const numberFormats = {
-		'en-US': {
-			currency: {
-				style: 'currency', currency: 'USD'
-			}
-		},
-		'ja-JP': {
-			currency: {
-				style: 'currency', currency: 'JPY', currencyDisplay: 'symbol'
-			}
-		}
-	}
-	```
+     ```javascript
+     const numberFormats = {
+          'en-US': {
+               currency: {
+                    style: 'currency', currency: 'USD'
+               }
+          },
+          'ja-JP': {
+               currency: {
+                    style: 'currency', currency: 'JPY', currencyDisplay: 'symbol'
+               }
+          }
+     }
+     ```
 
      </span>
 
@@ -6394,14 +6394,14 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	const i18n = new VueI18n({
-		numberFormats
-	})
+     const i18n = new VueI18n({
+          numberFormats
+     })
 
-	new Vue({
-		i18n
-	}).$mount('#app')
-	```
+     new Vue({
+          i18n
+     }).$mount('#app')
+     ```
 
      </span>
 
@@ -6410,11 +6410,11 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```javascript
-	<div id="app">
-		<p>{{ $n(10, 'currency') }}</p>
-		<p>{{ $n(50, 'currency', 'ja-JP') }}</p>
-	</div>
-	```
+     <div id="app">
+          <p>{{ $n(10, 'currency') }}</p>
+          <p>{{ $n(50, 'currency', 'ja-JP') }}</p>
+     </div>
+     ```
 
      </span>
 
@@ -6427,7 +6427,7 @@ puppeteer:
            <p>$10.00</p>
            <p>￥50</p>
          </div>
-	```
+     ```
 
      </span>
 
@@ -6695,11 +6695,11 @@ puppeteer:
 
      1. **Installation:**
 
-	<span dir="ltr" align="left">
-	
-	```bash
-	npm install vuex-router-sync
-	```
+     <span dir="ltr" align="left">
+     
+     ```bash
+     npm install vuex-router-sync
+     ```
 
      </span>
 
@@ -6714,7 +6714,7 @@ puppeteer:
 
          const unsync = sync(store, router) // Returns an unsync callback function
          unsync() // Unsyncs store from router
-	```
+     ```
 
      </span>
 
@@ -6824,7 +6824,7 @@ puppeteer:
      
      <span dir="ltr" align="left">
 
-	```js
+     ```js
          data: { // Bad
            message: 'Hello'
          }
@@ -6845,14 +6845,14 @@ puppeteer:
      
      <span dir="ltr" align="left">
 
-	```js
+     ```js
      Vue.component('user', { //bad approach
        // ...
      })
 
      Vue.component('user-profile', { //good approach
             // ...
-	})
+     })
      ```
 
      </span>
@@ -6873,7 +6873,7 @@ puppeteer:
          npm install @vue/composition-api
          # or
          yarn add @vue/composition-api
-	```
+     ```
 
      </span>
 
@@ -6881,12 +6881,12 @@ puppeteer:
 
      <span dir="ltr" align="left">
 
-	```js
-	import Vue from 'vue'
-	import VueCompositionAPI from '@vue/composition-api'
+     ```js
+     import Vue from 'vue'
+     import VueCompositionAPI from '@vue/composition-api'
 
-	Vue.use(VueCompositionAPI)
-	```
+     Vue.use(VueCompositionAPI)
+     ```
 
      </span>
      
@@ -6894,10 +6894,10 @@ puppeteer:
 
      <span dir="ltr" align="left">
 
-	```js
-	// use the APIs
-	import { ref, reactive } from '@vue/composition-api'
-	```
+     ```js
+     // use the APIs
+     import { ref, reactive } from '@vue/composition-api'
+     ```
 
      </span>
 
