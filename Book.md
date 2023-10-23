@@ -47,8 +47,8 @@ puppeteer:
 
 | ردیف | سوال |
 |---- | --------- |
-|1  | [ویو جی‌اس چیه؟](#1) |
-|2  | [ویژگیهای کلیدی ویو جی‌اس چه چیزهایی هستن؟](#1) |
+|1  | [ویو جی‌اس چیه؟](#ویو-جی‌اس-چیه؟) |
+|2  | [ویژگیهای کلیدی ویو جی‌اس چه چیزهایی هستن؟](#ویژگیهای-کلیدی-ویو-جی‌اس-چه-چیزهایی-هستن؟) |
 |3  | [What are the lifecycle methods of VueJS](#1)|
 |4  | [What are the conditional directives](#1)|
 |5  | [What is the difference between v-show and v-if directives](#1)|
