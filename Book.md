@@ -47,8 +47,8 @@ puppeteer:
 
 | ردیف | سوال |
 |---- | --------- |
-|1  | [What is VueJS](#1) |
-|2  | [What are the major features of VueJS](#1) |
+|1  | [ویو جی‌اس چیه؟](#1) |
+|2  | [ویژگیهای کلیدی ویو جی‌اس چه چیزهایی هستن؟](#1) |
 |3  | [What are the lifecycle methods of VueJS](#1)|
 |4  | [What are the conditional directives](#1)|
 |5  | [What is the difference between v-show and v-if directives](#1)|
@@ -283,21 +283,24 @@ puppeteer:
 
 <div dir="rtl" align="right">
 
-1.  ### What is VueJS?
+1.  ### ویو جی‌اس چیه؟
 
-     **Vue.js** is an open-source, progressive Javascript framework for building user interfaces that aim to be incrementally adoptable. The core library of VueJS is focused on the `view layer` only, and is easy to pick up and integrate with other libraries or existing projects.
+     **ویو جی‌اس** یه چارچوب جاوا اسکریپتی متن‌باز و پیشرونده برای ساخت رابط‌های کاربری هست که هدف آن پذیرش تدریجی هست. کتابخانه اصلی ویو جی‌اس فقط بر روی `لایه ی مشاهده` متمرکز و به راحتی قابل انتخاب و ادغام با سایر کتابخانه ها یا پروژه های موجود هست.
+	   - دو تا مفهوم مهم در متن بالا:
+		 - **پیشرونده** یعنی شروع از یه چیز کوچک و به تدریج ساختن یه چیز بزرگتر.
+		 - **پذیرش تدریجی**: یعنی میتونید کد جاوا اسکریپتی فعلی خودتون رو داشته باشید و به تدریج کدهای ویو جی‌اس رو بهش اضافه کنید.
 
      **[فهرست](#فهرست)**
 
-2.  ### What are the major features of VueJS?
+2.  ### ویژگیهای کلیدی ویو جی‌اس چه چیزهایی هستن؟
 
-     Below are the some of major features available with VueJS:
+     در اینجا بعضی از ویژگی های اصلی VueJS آورده شده:
 
-     1. **Virtual DOM:** It uses virtual DOM similar to other existing frameworks such as ReactJS, Ember etc. Virtual DOM is a light-weight in-memory tree representation of the original HTML DOM and updated without affecting the original DOM.
-     2. **Components:** Used to create reusable custom elements in VueJS applications.
-     3. **Templates:** VueJS provides HTML based templates that bind the DOM with the Vue instance data
-     4. **Routing:** Navigation between pages is achieved through vue-router
-     5. **Light weight:** VueJS is light weight library compared to other frameworks.
+     1. **DOM مجازی:** از DOM مجازی مشابه سایر فریمورک های موجود مثل ReactJS، Ember و ... استفاده میکنه. DOM مجازی، یه نمایش درختی سبک وزن از DOM اصلی HTML هست که داخل Memory نگهداری میشه و بدون تأثیر بر DOM اصلی قابلیت به روزرسانی داره.
+     2. **کامپوننت ها:** برای ایجاد عناصری با دو ویژگی `سفارشی سازی` و `استفاده مجدد` در برنامه های VueJS استفاده میشن.
+     3. **قالب ها:** ویو جی‌اس قالب های مبتنی بر HTML رو ارائه میکنه و میتونه بین DOM و دیتاهای یه نمونه از Vue ارتباط برقرار کنه.
+     4. **مسیریابی:** از طریق vue-router  میشه بین صفحات پیمایش انجام داد.
+     5. **سبک-وزن بودن:** ویو جی‌اس یه چارچوب سبک در مقایسه با سایر چارچوب هاست.
 
      **[فهرست](#فهرست)**
 
