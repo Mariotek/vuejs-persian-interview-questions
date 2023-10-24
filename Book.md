@@ -47,9 +47,9 @@ puppeteer:
 
 | ردیف | سوال |
 |---- | --------- |
-|1  | [What is VueJS](#1) |
-|2  | [What are the major features of VueJS](#1) |
-|3  | [What are the lifecycle methods of VueJS](#1)|
+|1  | [ویو جی‌اس چیه؟](#ویو-جیاس-چیه) |
+|2  | [ویژگیهای کلیدی ویو جی‌اس چه چیزهایی هستن؟](#ویژگیهای-کلیدی-ویو-جیاس-چه-چیزهایی-هستن) |
+|3  | [چرخه حیات ویو جی‌اس شامل چه متدهایی هست؟](#چرخه-حیات-ویو-جیاس-شامل-چه-متدهایی-هست)|
 |4  | [What are the conditional directives](#1)|
 |5  | [What is the difference between v-show and v-if directives](#1)|
 |6  | [What is the purpose of v-for directive?](#1)|
@@ -283,33 +283,36 @@ puppeteer:
 
 <div dir="rtl" align="right">
 
-1.  ### What is VueJS?
+1.  ### ویو جی‌اس چیه؟
 
-     **Vue.js** is an open-source, progressive Javascript framework for building user interfaces that aim to be incrementally adoptable. The core library of VueJS is focused on the `view layer` only, and is easy to pick up and integrate with other libraries or existing projects.
-
-     **[فهرست](#فهرست)**
-
-2.  ### What are the major features of VueJS?
-
-     Below are the some of major features available with VueJS:
-
-     1. **Virtual DOM:** It uses virtual DOM similar to other existing frameworks such as ReactJS, Ember etc. Virtual DOM is a light-weight in-memory tree representation of the original HTML DOM and updated without affecting the original DOM.
-     2. **Components:** Used to create reusable custom elements in VueJS applications.
-     3. **Templates:** VueJS provides HTML based templates that bind the DOM with the Vue instance data
-     4. **Routing:** Navigation between pages is achieved through vue-router
-     5. **Light weight:** VueJS is light weight library compared to other frameworks.
+     **ویو جی‌اس** یه چارچوب جاوا اسکریپتی متن‌باز و پیشرونده برای ساخت رابط‌های کاربری هست که هدف آن پذیرش تدریجی هست. کتابخانه اصلی ویو جی‌اس فقط بر روی `لایه ی مشاهده` متمرکز و به راحتی قابل انتخاب و ادغام با سایر کتابخانه ها یا پروژه های موجود هست.
+	   - دو تا مفهوم مهم در متن بالا:
+		 - **پیشرونده** یعنی شروع از یه چیز کوچک و به تدریج ساختن یه چیز بزرگتر.
+		 - **پذیرش تدریجی**: یعنی میتونید کد جاوا اسکریپتی فعلی خودتون رو داشته باشید و به تدریج کدهای ویو جی‌اس رو بهش اضافه کنید.
 
      **[فهرست](#فهرست)**
 
-3.  ### What are the lifecycle methods of VueJS?
+2.  ### ویژگیهای کلیدی ویو جی‌اس چه چیزهایی هستن؟
 
-     Lifecycle hooks are a window into how the library you’re using works behind-the-scenes. By using these hooks, you will know when your component is created, added to the DOM, updated, or destroyed. Let's look at lifecycle diagram before going to each lifecycle hook in detail,
+     در اینجا بعضی از ویژگی های اصلی VueJS آورده شده:
+
+     1. **DOM مجازی:** از DOM مجازی مشابه سایر فریمورک های موجود مثل ReactJS، Ember و ... استفاده میکنه. DOM مجازی، یه نمایش درختی سبک وزن از DOM اصلی HTML هست که داخل Memory نگهداری میشه و بدون تأثیر بر DOM اصلی قابلیت به روزرسانی داره.
+     2. **کامپوننت ها:** برای ایجاد عناصری با دو ویژگی `سفارشی سازی` و `استفاده مجدد` در برنامه های VueJS استفاده میشن.
+     3. **قالب ها:** ویو جی‌اس قالب های مبتنی بر HTML رو ارائه میکنه و میتونه بین DOM و دیتاهای یه نمونه از Vue ارتباط برقرار کنه.
+     4. **مسیریابی:** از طریق vue-router  میشه بین صفحات پیمایش انجام داد.
+     5. **سبک-وزن بودن:** ویو جی‌اس یه چارچوب سبک در مقایسه با سایر چارچوب هاست.
+
+     **[فهرست](#فهرست)**
+
+3.  ### چرخه حیات ویو جی‌اس شامل چه متدهایی هست؟
+
+     هوک‌های چرخه حیات نحوه عملکرد ویوجی اس در پشت صحنه رو تشریح میکنند. با استفاده از این هوکها (قلاب ها)، متوجه میشیم که کامپوننتهای ما چه زمانی ایجاد میشن، به DOM اضافه میشن، به روزرسانی میشن یا از بین می روند. قبل از توضیح هر هوک با جزئیات بیشتر بهتره یه نگاه کلی به نمودار چرخه زندگی کنیم:
 
      <img src="https://github.com/sudheerj/vuejs-interview-questions/blob/master/images/lifecycle.png" width="400" height="800">
 
-     1. **Creation(Initialization):** Creation Hooks allow you to perform actions before your component has even been added to the DOM. You need to use these hooks if you need to set things up in your component both during client rendering and server rendering. Unlike other hooks, creation hooks are also run during server-side rendering.
+     1. **هوک های ایجاد (مقداردهی اولیه):** به شما این امکان رو میده تا قبل از اینکه کامپوننت شما به DOM اضافه ، عملیات مورد نظرتون رو انجام بدید. اگر نیاز به تنظیماتی در کامپوننت خودتون در حین رندر در سمت کلاینت و یا رندر در سمت سرور رو دارید، باید از این هوک ها استفاده کنید، چرا که بر خلاف سایر هوک ها، `هوک های ایجاد` در حین رندر سمت سرور نیز اجرا می شوند.
           
-          1. beforeCreate: This hook runs at the very initialization of your component. hook observes data and initialization events in your component. Here, data is still not reactive and events that occur during the component’s lifecycle have not been set up yet.
+     1. beforeCreate: این هوک در ابتدایی ترین مرحله ی مقداردهی کامپوننت شما اجرا میشه و میتونه داده ها و رویدادهای اولیه را در کامپوننت شما ببینه. در این مرحله، داده‌ها هنوز واکنش‌پذیر نیستند و رویدادهایی که در طول چرخه عمر کامپوننت رخ میدند هنوز تنظیم نشدن.
 
           <span dir="ltr" align="left">
 
@@ -330,7 +333,7 @@ puppeteer:
 
           </span>
     
-          2. created: This hook is invoked when Vue has set up events and data observation. Here, events are active and access to reactive data is enabled though templates have not yet been mounted or rendered.
+     2. created: این هوک زمانی فراخوانی می شود که Vue رویدادها و داده ها را تنظیم کرده باشه. در اینجا، رویدادها فعال هستند و دسترسی به داده‌های واکنشی هم فعال هست، اگرچه الگوها یا همون تمپلیت ها هنوز رندر نشدن:
         
        
    
@@ -351,11 +354,11 @@ puppeteer:
 
           </span>
 
-        **نکته:** Remember that, You will not have access to the DOM or the target mounting element (this.$el) inside of creation hooks
+        **نکته:** به یاد داشته باشید که شما به DOM یا عنصر هدف `this.$el` در داخل هوک های ایجاد دسترسی ندارید.
         
-     2. **Mounting(DOM Insertion):** Mounting hooks are often the most-used hooks and they allow you to access your component immediately before and after the first render.
+     2. **Mounting(درج DOM):** اغلب پرکاربردترین نوع هوک ها هستند و به شما این امکان رو میدن تا بلافاصله قبل و بعد از اولین رندر، به کامپوننت خودتون دسترسی داشته باشین.
 
-          1. beforeMount: The beforeMount allows you to access your component immediately before and after the first render.
+          1. BeforeMount: این هوک به شما این امکان رو میده تا بلافاصله قبل و بعد از اولین رندر به کامپوننت خودتون دسترسی داشته باشین.
 
           <span dir="ltr" align="left">
 
@@ -370,7 +373,7 @@ puppeteer:
 
           </span>
 
-          2. mounted: This is a most used hook and you will have full access to the reactive component, templates, and rendered DOM (via. this.$el).  The most frequently used patterns are fetching data for your component.
+          2. mounted: این یه هوک پر استفاده هست و شما به کامپوننت، تمپلیتها و DOM رندر شده (از طریق this.$el) دسترسی کامل خواهید داشت. بیشترین الگوی استفاده از این هوک، واکشی داده ها برای کامپوننت شماست.
      
           <span dir="ltr" align="left">
 
@@ -388,9 +391,9 @@ puppeteer:
 
           </span>
 
-     3. **Updating (Diff & Re-render):** Updating hooks are called whenever a reactive property used by your component changes, or something else causes it to re-render
+     3. **به روز رسانی (تغییر یا رندر مجدد):** هوک های به روز رسانی زمانی فراخوانی میشن که یکی از ویژگیهای واکنشی که توسط کامپوننت استفاده شده تغییر کنه یا یه چیز دیگه ای باعث رندر مجدد آن بشه.
           
-          1. beforeUpdate: The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.
+          1. BeforeUpdate: ای هوک بعد از تغییر داده ها در کامپوننت و شروع چرخه به روز رسانی و درست قبل از الحاق DOM و رندر شدن مجدد اجرا میشه.
      
           <span dir="ltr" align="left">
 
@@ -422,7 +425,7 @@ puppeteer:
 
           </span>
 
-          2. updated: This hook runs after data changes on your component and the DOM re-renders.
+          2. updated: این هوک بعد از تغییر داده ها در کامپوننت و رندر مجدد DOM اجرا میشه.
    
           <span dir="ltr" align="left">
 
@@ -453,10 +456,9 @@ puppeteer:
 
           </span>
 
-     4. **Destruction (Teardown):**
-     Destruction hooks allow you to perform actions when your component is destroyed, such as cleanup or analytics sending.
+     4. **از بین بردن (تخریب):** هوک های تخریب به شما این امکان را میدن که هنگام از بین رفتن کامپوننت، عملیاتی مثل پاکسازی داده یا ارسال کردن تحلیلها رو انجام بدید.
      
-          1. beforeDestroy: `beforeDestroy` is fired right before teardown. If you need to cleanup events or reactive subscriptions, beforeDestroy would probably be the time to do it. Your component will still be fully present and functional.
+          1. BeforeDestroy: این هوک درست قبل از تخریب اجرا میشه. اگر نیاز به پاکسازی رویدادها یا دیتاهای واکنشی رو دارید باید از این هوک استفاده کنید. در این هوک کامپوننت شما همچنان به صورت کامل موجود خواهد بود.
    
           <span dir="ltr" align="left">
 
@@ -477,7 +479,7 @@ puppeteer:
 
           </span>
 
-          2. destroyed: This hooks is called after your component has been destroyed, its directives have been unbound and its event listeners have been removed.
+          2. destroyed: این هوک بعد از از بین رفتن کامپوننت، حذف دستورات (Directive) آن و حذف شنوندگان رویداد آن فراخوانی میشه.
    
           <span dir="ltr" align="left">
 
