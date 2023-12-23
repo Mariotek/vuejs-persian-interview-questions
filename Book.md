@@ -47,75 +47,75 @@ puppeteer:
 
 | ردیف | سوال |
 |---- | --------- |
-|1  | [What is VueJS](#1) |
-|2  | [What are the major features of VueJS](#1) |
-|3  | [What are the lifecycle methods of VueJS](#1)|
-|4  | [What are the conditional directives](#1)|
-|5  | [What is the difference between v-show and v-if directives](#1)|
-|6  | [What is the purpose of v-for directive?](#1)|
-|7  | [What is vue instance?](#1)|
-|8  | [How do you achieve conditional group of elements?](#1)|
-|9  | [How do you reuse elements with key attribute?](#1)|
-|10 | [Why should not use if and for directives together on the same element?](#1)|
-|11 | [Why do you need to use key attribute on for directive?](#1)|
-|12 | [What are the array detection mutation methods?](#1)|
-|13 | [What are the array detection non mutation methods?](#1)|
-|14 | [What are the caveats of array changes detection?](#1)|
-|15 | [What are the caveats of object changes detection?](#1)|
-|16 | [How do you use for directive with a range?](#1)|
-|17 | [How do you use for directive on template?](#1)|
-|18 | [How do you use event handlers?](#1)|
-|19 | [What are the event modifiers provided by vue?](#1)|
-|20 | [What are key modifiers?](#1)|
-|21 | [How do you define custom key modifier aliases?](#1)|
-|22 | [What are the supported System Modifier Keys?](#1)|
-|23 | [What are the supported Mouse Button Modifiers?](#1)|
-|24 | [How do you implement two way binding?](#1)|
-|25 | [What are the supported modifiers on model?](#1)|
-|26 | [What are components and give an example?](#1)|
-|27 | [What are props?](#1)|
-|28 | [When component needs a single root element?](#1)|
-|29 | [How do you communicate from child to parent using events?](#1)|
-|30 | [How do you implement model on custom input components?](#1)|
-|31 | [What are slots?](#1)|
-|32 | [What is global registration in components?](#1)|
-|33 | [Why do you need local registration?](#1)|
-|34 | [What is the difference between local and global registration in module system?](#1)|
-|35 | [What are possible prop types?](#1)|
-|36 | [What is the data flow followed by props?](#1)|
-|37 | [What are non prop attributes?](#1)|
-|38 | [Describe about validations available for props?](#1)|
-|39 | [How do you customize model directive for a component?](#1)|
-|40 | [What are the possible ways to provide transitions?](#1)|
-|41 | [What is vue router and their features?](#1)|
-|42 | [What are the steps to use vue router and give an example?](#1)|
-|43 | [What is dynamic route matching?](#1)|
-|44 | [How to make router param changes as reactive?](#1)|
-|45 | [What is route matching priority?](#1)|
-|46 | [What are nested routes?](#1)|
-|47 | [What are single file components?](#1)|
-|48 | [Is Single File Components violating separation of concerns?](#1)|
-|49 | [What are the problems solved by Single File Components?](#1)|
-|50 | [What are filters?](#1)|
-|51 | [What are the different ways to create filters?](#1)|
-|52 | [How do you chain filters](#1)|
-|53 | [Is it possible to pass parameters for filters?](#1)|
-|54 | [What are plugins and their various services?](#1)|
-|55 | [ How to create a plugin?](#1)|
-|56 | [How to use a plugin?](#1)|
-|57 | [What are mixins?](#1)|
-|58 | [What are global mixins?](#1)|
-|59 | [How do you use mixins in CLI?](#1)|
-|60 | [What are the merging strategies in mixins?](#1)|
-|61 | [What are custom options merging strategies?](#1)|
-|62 | [What are custom directives?](#1)|
-|63 | [How do you register directives locally?](#1)|
-|64 | [What are the hook functions provided by directives?](#1)|
-|65 | [What are the directive Hook Arguments?](#1)|
-|66 | [How do you pass multiple values to a directive?](#1)|
-|67 | [What is function shorthand in directive hooks?](#1)|
-|68 | [What is the benefit of render functions over templates?](#1)|
-|69 | [What is a render function?](#1)|
+|1  | [VueJs چیه؟](#VueJs-چیه؟) |
+|2  | [مزایای اصلی استفاده از VueJs چیه؟](#مزایای-اصلی-استفاده-از-VueJs-چیه؟) |
+|3  | [lifecycle های مربوط به VueJs چیا هستن؟](#lifecycle-های-مربوط-به-VueJs-چیا-هستن؟)|
+|4  | [منظور از conditional directives چیه؟](#منظور-از-conditional-directives-چیه؟)|
+|5  | [تفاوت بین directive های v-if و v-show چیه؟](#تفاوت-بین-directive-های-v-if-و-v-show-چیه؟)|
+|6  | [هدف از directive v-for چیه؟](#هدف-از-directive-v-for-چیه؟)|
+|7  | [منظور از vue instance چیه؟](#منظور-از-vue-instance-چیه؟)|
+|8  | [چطوری مجموعه ای از المان های صفحه رو شرطی رندر میکنی؟](#چطوری-مجموعه-ای-از-المان-های-صفحه-رو-شرطی-رندر-میکنی؟)|
+|9  | [چطوری از المنت ها با استفاده از اتریبیوت key دوباره ازش استفاده میکنی؟](#چطوری-از-المنت-ها-با-استفاده-از-اتریبیوت-key-دوباره-ازش-استفاده-میکنی؟)|
+|10 | [چرا نباید از directive های if و for باهمدیگه استفاده کنیم؟](#چرا-نباید-از-directive-های-if-و-for-باهمدیگه-استفاده-کنیم؟)|
+|11 | [چرا ما باید موقعی که از directive for استفاده میکنیم اتریبیوت key رو استفاده کنیم؟](#چرا-ما-باید-موقعی-که-از-directive-for-استفاده-میکنیم-اتریبیوت-key-رو-استفاده-کنیم؟)|
+|12 | [متد هایی که باعث تغییر ارایه میشن و باعث اپدیت view میشن کدوما هستن؟](#1)|
+|13 | [متد هایی که باعث تغییر ارایه نمیشن و باعث اپدیت view میشن کدوما هستن؟](#1)|
+|14 | [چه چیزایی رو باید درمورد حساسیت به تغییر ارایه ها بدونیم؟](#1)|
+|15 | [چه چیزایی رو باید درمورد حساسیت به تغییر object ها بدونیم؟](#1)|
+|16 | [چطوری میتونیم از دستورالعمل v-for برای یه رنج مشخص استفاده کنیم؟](#1)|
+|17 | [چطوری از دستورالعمل v-for روی template ها استفاده کنیم؟](#1)|
+|18 | [چطوری متونیم از event handler ها استفاده کنیم؟](#1)|
+|19 | [اصلاح کننده هایی که توسط ویو ارائه میشن کدوما هستن؟](#1)|
+|20 | [اصلاح کننده های اصلی کدوما هستن؟](#1)|
+|21 | [چطوری میتونیم برای یه اصلاح کننده اصلی خلاصه شده بنویسیم؟](#1)|
+|22 | [اصلاح کننده های سیستمی که توسط ویو پشتیبانی میشن کدوما هستن؟](#1)|
+|23 | [اصلاح کننده های مربوط به موس کدوما هستن؟](#1)|
+|24 | [چطوری دیتا رو به صورت دو طرفه bind میکنی؟](#1)|
+|25 | [اصلاح کننده های پشتیبانی شده روی model چیا هستن؟](#1)|
+|26 | [کامپوننت ها چیا هستن یه مثال درموردش بزن؟](#1)|
+|27 | [پراپ ها چیا هستن؟](#1)|
+|28 | [کی یه کمپوننت به یه عنصر روت نیاز داره؟](#1)|
+|29 | [چطوری از سمت کامپوننت فرزند به سمت کامپوننت بالا دیتا  میفرستی؟](#1)|
+|30 | [چطوری یه مدل روی یه custom input اجرا میکنی؟](#1)|
+|31 | [slot ها چیا هستن؟](#1)|
+|32 | [منظور از global registration توی یه کامپوننت چیه؟](#1)|
+|33 | [چرا به local registration نیاز داریم؟](#1)|
+|34 | [تفاوت بین local و global registration توی یه سیستم ماژولار چیه؟](#1)|
+|35 | [تایپ های قابل استفاده برای پراپ ها چیا هستن؟](#1)|
+|36 | [data flow مربوط به پراپ ها چطوری هست؟](#1)|
+|37 | [منظور از اتربیوت های non prop چیه؟](#1)|
+|38 | [اعتبار سنجی هایی که برای پراپ ها داریم چیا هستن؟](#1)|
+|39 | [چطوری میتونیم دستورالعمل model رو برای یه کامپوننت کاستومایز کنیم؟](#1)|
+|40 | [چطوری میتونیم یه transition تنظیم کنیم؟](#1)|
+|41 | [vue router چیه و چه قابلیت هایی داره؟](#1)|
+|42 | [قدم هایی که برای کانفیگ vue router لازمه برداشته شه چیا هستن؟](#1)|
+|43 | [منظور از dynamic route چیه؟](#1)|
+|44 | [چطوری تفییرات param رو سریع انجام بدیم؟](#1)|
+|45 | [منظور از اولویت توی route matching چیه؟](#1)|
+|46 | [منظور از nasted route چیه؟](#1)|
+|47 | [منظور از single file component چیه؟](#1)|
+|48 | [single File component ها استاندارد تفکیک کد رو نقض میکنه؟](#1)|
+|49 | [چه مشکلایی با single file component ها حل میشن؟](#1)|
+|50 | [فیلتر ها چیا هستن؟](#1)|
+|51 | [تفاوت بین روش های ساخت یه فیلتر چیا هستن؟](#1)|
+|52 | [چطوری میتونیم زنجیره ای از فیلتر ها درست کنیم؟](#1)|
+|53 | [ایا این امکان پذیر هست که پارامتر ها رو به فیلتر ها پاس بدیم؟](#1)|
+|54 | [پلاگین ها و سرویس های مختلف اونا چیا هستن؟](#1)|
+|55 | [ چطوری میتونیم یه پلاگین بسازیم؟](#1)|
+|56 | [چطوری از یه پلاگین استفاده کنیم؟](#1)|
+|57 | [منظور از mixin چیه؟](#1)|
+|58 | [mixin های global چیا هستن؟](#1)|
+|59 | [چطوری از mixin ها توی CLI اسفاده میکنی؟](#1)|
+|60 | [منظور از merge کردن استراتژی ها توی mixin چیه؟](#1)|
+|61 | [آپشن های کاستوم برای مرج کردن استراتژی ها چیا هستن؟](#1)|
+|62 | [منظور از دستورالعمل کاستوم توی ویو چیه؟](#1)|
+|63 | [چطوری یه دستورالعمل رو به صورت لوکال رجیستر میکنی؟](#1)|
+|64 | [hook function های که توسط دستورالعمل ها فراهم میشن کدوما هستن؟](#1)|
+|65 | [ارگومان های مربوط به دستورالعمل هوک چیه](#1)|
+|66 | [چطوری مقادیر رو به یه دستورالعمل میفرستی؟](#1)|
+|67 | [خلاصه شده funtion توی محیط دستورالعمل چیه؟](#1)|
+|68 | [مزایای render function ها روی template ها چیا هستن؟](#1)|
+|69 | [منظور از render function چیه؟](#1)|
 |70 | [Explain the structure of createElement with arguments](#1)|
 |71 | [How can you write duplicate virtual nodes in a component?](#1)|
 |72 | [List down the template equivalents in render functions?](#1)|
@@ -283,13 +283,13 @@ puppeteer:
 
 <div dir="rtl" align="right">
 
-1.  ### What is VueJS?
+1.  ### VueJs چیه؟
 
      **Vue.js** is an open-source, progressive Javascript framework for building user interfaces that aim to be incrementally adoptable. The core library of VueJS is focused on the `view layer` only, and is easy to pick up and integrate with other libraries or existing projects.
 
      **[فهرست](#فهرست)**
 
-2.  ### What are the major features of VueJS?
+2.  ### مزایای اصلی استفاده از VueJs چیه؟
 
      Below are the some of major features available with VueJS:
 
@@ -301,7 +301,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-3.  ### What are the lifecycle methods of VueJS?
+3.  ### lifecycle های مربوط به VueJs چیا هستن؟
 
      Lifecycle hooks are a window into how the library you’re using works behind-the-scenes. By using these hooks, you will know when your component is created, added to the DOM, updated, or destroyed. Let's look at lifecycle diagram before going to each lifecycle hook in detail,
 
@@ -390,9 +390,9 @@ puppeteer:
 
      3. **Updating (Diff & Re-render):** Updating hooks are called whenever a reactive property used by your component changes, or something else causes it to re-render
           
-          1. beforeUpdate: The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.
+        1. beforeUpdate: The beforeUpdate hook runs after data changes on your component and the update cycle begins, right before the DOM is patched and re-rendered.
      
-          <span dir="ltr" align="left">
+      <span dir="ltr" align="left">
 
           ```javascript
           <div id="app">
@@ -420,11 +420,11 @@ puppeteer:
           })
           ```
 
-          </span>
+      </span>
 
           2. updated: This hook runs after data changes on your component and the DOM re-renders.
    
-          <span dir="ltr" align="left">
+      <span dir="ltr" align="left">
 
           ```javascript
           <div id="app">
@@ -451,14 +451,14 @@ puppeteer:
           })
           ```
 
-          </span>
+      </span>
 
      4. **Destruction (Teardown):**
      Destruction hooks allow you to perform actions when your component is destroyed, such as cleanup or analytics sending.
      
-          1. beforeDestroy: `beforeDestroy` is fired right before teardown. If you need to cleanup events or reactive subscriptions, beforeDestroy would probably be the time to do it. Your component will still be fully present and functional.
+      1. beforeDestroy: `beforeDestroy` is fired right before teardown. If you need to cleanup events or reactive subscriptions, beforeDestroy would probably be the time to do it. Your component will still be fully present and functional.
    
-          <span dir="ltr" align="left">
+      <span dir="ltr" align="left">
 
           ```javascript
           new Vue ({
@@ -475,11 +475,11 @@ puppeteer:
           })
           ```
 
-          </span>
+      </span>
 
-          2. destroyed: This hooks is called after your component has been destroyed, its directives have been unbound and its event listeners have been removed.
+      2. destroyed: This hooks is called after your component has been destroyed, its directives have been unbound and its event listeners have been removed.
    
-          <span dir="ltr" align="left">
+      <span dir="ltr" align="left">
 
           ```javascript
           new Vue ({
@@ -489,11 +489,11 @@ puppeteer:
           })
           ```
 
-          </span>
+      </span>
 
      **[فهرست](#فهرست)**
 
-4.  ### What are the conditional directives?
+4.  ### منظور از conditional directives چیه؟
 
      VueJS provides set of directives to show or hide elements based on conditions. The available directives are: **v-if, v-else, v-else-if and v-show**
 
@@ -557,7 +557,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-5.  ### What is the difference between v-show and v-if directives?
+5.  ### تفاوت بین directive های v-if و v-show چیه؟
 
      Below are some of the main differences between **v-show** and **v-if** directives,
 
@@ -568,7 +568,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-6.  ### What is the purpose of v-for directive?
+6.  ### هدف از directive v-for چیه؟
 
      The built-in v-for directive allows us to loop through items in an array or object. You can iterate on each element in the array or object.
 
@@ -625,7 +625,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-7.  ### What is vue instance?
+7.  ### منظور از vue instance چیه؟
 
      Every Vue application works by creating a new Vue instance with the Vue function. Generally the variable vm (short for ViewModel) is used to refer Vue instance. You can create vue instance as below,
      
@@ -643,7 +643,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-8.  ### How do you achieve conditional group of elements?
+8.  ### چطوری مجموعه ای از المان های صفحه رو شرطی رندر میکنی؟
 
      You can achieve conditional group of elements(toggle multiple elements at a time) by applying **v-if** directive on `<template>` element which works as invisible wrapper(no rendering) for group of elements.
 
@@ -663,7 +663,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-9.  ### How do you reuse elements with key attribute?
+9.  ### چطوری از المنت ها با استفاده از اتریبیوت key دوباره ازش استفاده میکنی؟
 
      Vue always tries to render elements as efficient as possible. So it tries to reuse the elements instead of building them from scratch. But this behavior may cause problems in few scenarios.
 
@@ -705,7 +705,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-10. ### Why should not use if and for directives together on the same element?
+10. ### چرا نباید از directive های if و for باهمدیگه استفاده کنیم؟
 
      It is recommended not to use v-if on the same element as v-for. Because v-for directive has a higher priority than v-if.
      There are two cases where developers try to use this combination,
@@ -792,7 +792,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-11.  ### Why do you need to use key attribute on for directive?
+11.  ### چرا ما باید موقعی که از directive for استفاده میکنیم اتریبیوت key رو استفاده کنیم؟
 
      In order to track each node’s identity, and thus reuse and reorder existing elements, you need to provide a unique `key` attribute for each item with in `v-for` iteration. An ideal value for key would be the unique id of each item.
 
@@ -814,7 +814,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-12.  ### What are the array detection mutation methods?
+12.  ### متد هایی که باعث تغییر ارایه میشن و باعث اپدیت view میشن کدوما هستن؟
 
      As the name suggests, mutation methods modifies the original array.
 
@@ -864,7 +864,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-14.  ### What are the caveats of array changes detection?
+14.  ### چه چیزایی رو باید درمورد حساسیت به تغییر ارایه ها بدونیم؟
 
      Vue cannot detect changes for the array in the below two cases,
 
@@ -916,7 +916,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-15.  ### What are the caveats of object changes detection?
+15.  ### چه چیزایی رو باید درمورد حساسیت به تغییر object ها بدونیم؟
 
      Vue cannot detect changes for the object in property addition or deletion.
 
@@ -956,7 +956,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-16.  ### How do you use v-for directive with a range?
+16.  ### چطوری میتونیم از دستورالعمل v-for برای یه رنج مشخص استفاده کنیم؟
 
      You can also use integer type(say 'n') for `v-for` directive which repeats the element many times.
 
@@ -974,7 +974,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-17.  ### How do you use v-for directive on template?
+17.  ### چطوری از دستورالعمل v-for روی template ها استفاده کنیم؟
 
      Just similar to v-if directive on template, you can also use a `<template>` tag with v-for directive to render a block of multiple elements.
 
@@ -995,7 +995,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-18.  ### How do you use event handlers?
+18.  ### چطوری متونیم از event handler ها استفاده کنیم؟
 
      You can use event handlers in vue similar to plain javascript. The method calls also support the special $event variable.
 
@@ -1019,7 +1019,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-19.  ### What are the event modifiers provided by vue?
+19.  ### اصلاح کننده هایی که توسط ویو ارائه میشن کدوما هستن؟
 
      Normally, javascript provides `event.preventDefault() or event.stopPropagation()` inside event handlers. You can use methods provided by vue, but these methods are meant for data logic instead of dealing with DOM events. Vue provides below event modifiers for v-on and these modifiers are directive postfixes denoted by a dot.
      
@@ -1054,7 +1054,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-20.  ### What are key modifiers?
+20.  ### اصلاح کننده های اصلی کدوما هستن؟
 
      Vue supports key modifiers on `v-on` for handling keyboard events. Let's take an example of keyup event with enter keycode.
      
@@ -1095,7 +1095,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-21.  ### How do you define custom key modifier aliases?
+21.  ### چطوری میتونیم برای یه اصلاح کننده اصلی خلاصه شده بنویسیم؟
 
      You can define custom key modifier aliases via the global `config.keyCodes`. There are few guidelines for the properties
      1. You can't use camelCase. Instead you can use kebab-case with double quotation marks
@@ -1115,7 +1115,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-22.  ### What are the supported System Modifier Keys?
+22.  ### اصلاح کننده های سیستمی که توسط ویو پشتیبانی میشن کدوما هستن؟
 
      Vue supports below modifiers to trigger mouse or keyboard event listeners when the corresponding key is pressed,
      1. .ctrl
@@ -1136,12 +1136,12 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-23.  ### What are the supported Mouse Button Modifiers?
+23.  ### اصلاح کننده های مربوط به موس کدوما هستن؟
 
-     Vue supports below mouse button modifiers
-     1. .left
-     2. .right
-     3. .middle
+    Vue supports below mouse button modifiers
+    1. .left
+    2. .right
+    3. .middle
 
      For example, the usage of `.right` modifier as below
 
@@ -1152,14 +1152,14 @@ puppeteer:
         v-if="button === 'right'"
         v-on:mousedown.right="increment"
         v-on:mousedown.left="decrement"
-      />
+        >click</button>
      ```
 
      </span>
 
      **[فهرست](#فهرست)**
 
-24.  ### How do you implement two-way binding?
+24.  ### چطوری دیتا رو به صورت دو طرفه bind میکنی؟
 
      You can use the `v-model` directive to create two-way data bindings on form input, textarea, and select elements.
 
@@ -1168,7 +1168,7 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```vue
-     <input v-model="message" placeholder="Enter input here">
+     <input v-model="message" placeholder="Enter input here"/>
      <p>The message is: {{ message }}</p>
      ```
 
@@ -1178,7 +1178,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-25.  ### What are the supported modifiers on model?
+25.  ### اصلاح کننده های پشتیبانی شده روی model چیا هستن؟
 
      There are three modifiers supported for v-model directive.
 
@@ -1188,7 +1188,7 @@ puppeteer:
      
      ```vue
      <!-- synced after "change" instead of "input" -->
-     <input v-model.lazy="msg" >
+     <input v-model.lazy="msg" />
      ```
 
      </span>
@@ -1198,7 +1198,7 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```vue
-     <input v-model.number="age" type="number">
+     <input v-model.number="age" type="number"/>
      ```
 
      </span>
@@ -1208,14 +1208,14 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```vue
-     <input v-model.trim="msg">
+     <input v-model.trim="msg" />
      ```
 
      </span>
 
      **[فهرست](#فهرست)**
 
-26.  ### What are components and give an example?
+26.  ### کامپوننت ها چیا هستن یه مثال درموردش بزن؟
 
      Components are reusable Vue instances with a name. They accept the same options as new Vue, such as data, computed, watch, methods, and lifecycle hooks(except few root-specific options like el).
 
@@ -1253,7 +1253,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-27.  ### What are props?
+27.  ### پراپ ها چیا هستن؟
 
      Props are custom attributes you can register on a component. When a value is passed to a prop attribute, it becomes a property on that component instance. You can pass those list of values as props option and use them as similar to data variables in template.
 
@@ -1281,7 +1281,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-28.  ### When component needs a single root element?
+28.  ### کی یه کامپوننت به یه عنصر روت نیاز داره؟
 
      In VueJS 2.x, every component must have a single root element **when template has more than one element**. In this case, you need to wrap the elements with a parent element.
      
@@ -1315,7 +1315,7 @@ puppeteer:
      
      **[فهرست](#فهرست)**
 
-29.  ### How do you communicate from child to parent using events?
+29.  ### چطوری از سمت کامپوننت فرزند به سمت کامپوننت بالا دیتا میفرستی؟
 
      If you want child wants to communicate back up to the parent, then emit an event from child using `$emit` object to parent,
 
@@ -1359,7 +1359,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-30.  ### How do you implement model on custom input components?
+30.  ### چطوری یه مدل روی یه custom input اجرا میکنی؟
 
      The custom events can also be used to create custom inputs that work with v-model. The `<input>` inside the component must follow below rules,
 
@@ -1396,7 +1396,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-31.  ### What are slots?
+31.  ### slot ها چیا هستن؟
 
      Vue implements a content distribution API using the <slot> element to serve as distribution outlets for content created after the current Web Components spec draft.
 
@@ -1431,7 +1431,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-32.  ### What is global registration in components?
+32.  ### منظور از global registration توی یه کامپوننت چیه؟
 
      The components which are globally registered can be used in the template of any root Vue instance (new Vue) created after registration.
 
@@ -1479,7 +1479,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-33.  ### Why do you need local registration?
+33.  ### چرا به local registration نیاز داریم؟
 
      Due to global registration, even if you don't use the component it could still be included in your final build. So it will create unnecessary javascript in the application. This can be avoided using local registration with the below steps:
 
@@ -1530,7 +1530,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-34.  ### What is the difference between local and global registration in module system?
+34.  ### تفاوت بین local و global registration توی یه سیستم ماژولار چیه؟
 
      In **local registration**, you need to create each component in components folder(optional but it is recommended) and import them in another component file components section.
 
@@ -1601,7 +1601,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-35.  ### What are possible prop types?
+35.  ### تایپ های قابل استفاده برای پراپ ها چیا هستن؟
 
      You can declare props with type or without type. But it is recommended to have prop types because it provides the documentation for the component and warns the developer for any incorrect data type being assigned.
 
@@ -1623,7 +1623,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-36.  ### What is the data flow followed by props?
+36.  ### data flow مربوط به پراپ ها چطوری هست؟
 
      All props follows a one-way-down binding between the child property and the parent one. i.e, When the parent property is updated then that latest prop value will be passed down to the child, but not the otherway(child to parent) around. The child component should not mutate the prop otherwise it throws a warning in the console.
      The possible mutation cases can be solved as below:
@@ -1661,7 +1661,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-37.  ### What are non prop attributes?
+37.  ### منظور از اتربیوت های non prop چیه؟
 
      A non-prop attribute is an attribute that is passed to a component, but does not have a corresponding prop defined.
 
@@ -1681,7 +1681,7 @@ puppeteer:
 
      ```vue
      <!-- Child component -->
-     <input type="date" class="date-control">
+     <input type="date" class="date-control"/>
 
      <!-- Parent component -->
      <custom-input class="custom-class" />
@@ -1691,7 +1691,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-38.  ### Describe about validations available for props?
+38.  ### اعتبار سنجی هایی که برای پراپ ها داریم چیا هستن؟
 
      Vue provides validations such as types, required fields, default values along with customized validations. You can provide an object with validation requirements to the value of props as below,
 
@@ -1740,7 +1740,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-39.  ### How do you customize model directive for a component?
+39.  ### چطوری میتونیم دستورالعمل model رو برای یه کامپوننت کاستومایز کنیم؟
 
      The v-model directive on a component uses **value** as the prop and **input** as the event, but some input types such as `checkboxes` and `radio buttons` may need to use the value attribute for a server side value. In this case, it is preferred to customize model directive.
 
@@ -1783,7 +1783,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-40.  ### What are the possible ways to provide transitions?
+40.  ### چطوری میتونیم یه transition تنظیم کنیم؟
 
      There are many ways Vue provides transition effects when items are inserted, updated, or removed from the DOM.
      Below are the possible ways:
@@ -1795,7 +1795,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-41.  ### What is vue router and their features?
+41.  ### vue router چیه و چه قابلیت هایی داره؟
 
      Vue Router is a official routing library for single-page applications designed for use with the Vue.js framework.
 
@@ -1812,7 +1812,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-42.  ### What are the steps to use vue router and give an example?
+42.  ### قدم هایی که برای کانفیگ vue router لازمه برداشته شه چیا هستن؟
 
      It is easy to integrate vue router in the vue application.
 
@@ -1906,7 +1906,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-43.  ### What is dynamic route matching?
+43.  ### منظور از dynamic route چیه؟
 
      Sometimes it may be required to map routes to the same component based on a pattern.
 
@@ -1931,7 +1931,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-44.  ### How to make router param changes as reactive?
+44.  ### چطوری تفییرات param رو سریع انجام بدیم؟
 
      When you navigate from one URL to other(mapped with a single component) using routes with params then the same component instance will be reused. Even though it is more efficient than destroying the old instance and then creating a new one, the lifecycle hooks of the component will not be called.
 
@@ -1973,7 +1973,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-45.  ### What is route matching priority?
+45.  ### منظور از اولویت توی route matching چیه؟
 
      Sometimes the URL might be matched by multiple routes and the confusion of which route need to be mapped is resolved by route matching priority. The priority is based on order of routes configuration. i.e, The route which declared first has higher priority.
 
@@ -1994,7 +1994,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-46.  ### What are nested routes?
+46.  ### منظور از nasted route چیه؟
 
      Generally, the app is composed of nested components which are nested multiple levels deep. The segments of a URL corresponds to a certain structure of these nested components. To render components into the nested outlet, you need to use the `children` option in `VueRouter` constructor config.
 
@@ -2030,7 +2030,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-47.  ### What are single file components?
+47.  ### منظور از single file component چیه؟
 
      Single File Components are an easy concept to understand. Earlier you might heard about all three parts(HTML, JavaScript and CSS) of your application kept in different components. But Single File Components encapsulate the structure, styling and behaviour into one file. In the beginning, it seems strange to have all three parts in one file, but it actually makes a lot more sense.
 
@@ -2067,7 +2067,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-48.  ### Is Single File Components violating separation of concerns?
+48.  ### single File component ها استاندارد تفکیک کد رو نقض میکنه؟
 
      As for the latest modern UI development, separation of concerns is not equal to separation of file types. So it is preferred to divide codebase layers into loosely-coupled components and compose them instead of dividing the codebase into three huge layers that interweave with one another. This way makes Single File Components more cohesive and maintainable by combining template, logic and styles together inside a component.
      You can also still maintain javascript and CSS files separately with hot-reloading and pre-compilation features.
@@ -2088,7 +2088,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-49.  ### What are the problems solved by Single File Components?
+49.  ### چه مشکلایی با single file component ها حل میشن؟
 
      The Single File Components solve the common problems occurred in a javascript driven application with a .vue extension. The list of issues are,
      1. Global definitions force unique names for every component
@@ -2098,7 +2098,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-50.  ### What are filters?
+50.  ### فیلتر ها چیا هستن؟
 
      Filters can be used to apply common text formatting. These Filters should be appended to the end of the JavaScript expression, denoted by the “pipe” symbol. You can use them in two specific cases:
 
@@ -2137,7 +2137,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-51.  ### What are the different ways to create filters?
+51.  ### تفاوت بین روش های ساخت یه فیلتر چیا هستن؟
 
      You can define filters in two ways:
 
@@ -2179,7 +2179,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-52.  ### How do you chain filters?
+52.  ### چطوری میتونیم زنجیره ای از فیلتر ها درست کنیم؟
 
      You can chain filters one after the other to perform multiple manipulations on the expression. The generic structure of filter chain would be as below:
 
@@ -2205,7 +2205,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-53.  ### Is it possible to pass parameters for filters?
+53.  ### ایا این امکان پذیر هست که پارامتر ها رو به فیلتر ها پاس بدیم؟
 
      Yes, you can pass arguments for a filter similar to a javascript function. The generic structure of filter parameters would be as follows:
 
@@ -2231,7 +2231,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-54.  ### What are plugins and their various services?
+54.  ### پلاگین ها و سرویس های مختلف اونا چیا هستن؟
 
      Plugins provides global-level functionality to Vue application. The plugins provide various services:
 
@@ -2243,7 +2243,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-55.  ### How to create a plugin?
+55.  ### چطوری میتونیم یه پلاگین بسازیم؟
 
      The Plugin is created by exposing an `install` method which takes Vue constructor as a first argument along with options. The structure of VueJS plugin with possible functionality would be as follows,
  
@@ -2283,7 +2283,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-56.  ### How to use a plugin?
+56.  ### چطوری از یه پلاگین استفاده کنیم؟
 
      You can use plugin by passing your plugin to Vue's **use** global method. You need to apply this method before start your app by calling new Vue().
 
@@ -2302,7 +2302,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-57.  ### What are mixins?
+57.  ### منظور از mixin چیه؟
 
      Mixin gives us a way to distribute reusable functionalities in Vue components. These reusable functions are merged with existing functions. A mixin object can contain any component options. Let us take an example of mixin with `created` lifecycle which can be shared across components,
 
@@ -2326,7 +2326,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-58.  ### What are global mixins?
+58.  ### mixin های global چیا هستن؟
 
      Sometimes there is a need to extend the functionality of Vue or apply an option to all Vue components available in our application. In this case, mixins can be applied globally to affect all components in Vue. These mixins are called as global mixins.
 
@@ -2352,13 +2352,13 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-59.  ### How do you use mixins in CLI?
+59.  ### چطوری از mixin ها توی CLI اسفاده میکنی؟
 
      Using Vue CLI, mixins can be specified anywhere in the project folder but preferably within `/src/mixins` for ease of access. Once these mixins are created in a `.js` file and exposed with the `export` keyword, they can be imported in any component with the `import` keyword and their file paths.
 
      **[فهرست](#فهرست)**
 
-60.  ### What are the merging strategies in mixins?
+60.  ### منظور از merge کردن استراتژی ها توی mixin چیه؟
 
      When a mixin and the component itself contain overlapping options, the options will be merged based on some strategies.
      1. The data objects undergo a recursive merge, with the component’s data taking priority over mixins in cases of overlapping or conflicts.
@@ -2450,7 +2450,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-61.  ### What are custom options merging strategies?
+61.  ### آپشن های کاستوم برای مرج کردن استراتژی ها چیا هستن؟
 
      Vue uses the default strategy which overwrites the existing value while custom options are merged. But if you want a custom option merged using custom login then you need to attach a function to `Vue.config.optionMergeStrategies`
 
@@ -2487,7 +2487,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-62.  ### What are custom directives?
+62.  ### منظور از دستورالعمل کاستوم توی ویو چیه؟
 
      Custom Directives are tiny commands that you can attach to DOM elements. They are prefixed with v- to let the library know you're using a special bit of markup and to keep syntax consistent. They are typically useful if you need low-level access to an HTML element to control a bit of behavior.
 
@@ -2513,14 +2513,14 @@ puppeteer:
      <span dir="ltr" align="left">
 
      ```vue
-     <input v-focus>
+     <input v-focus/>
      ```
 
      </span>
 
      **[فهرست](#فهرست)**
 
-63.  ### How do you register directives locally?
+63.  ### چطوری یه دستورالعمل رو به صورت لوکال رجیستر میکنی؟
 
      You can also register directives locally(apart from globally) using directives option in component as below,
 
@@ -2544,14 +2544,14 @@ puppeteer:
      <span dir="ltr" align="left">
      
      ```vue
-     <input v-focus>
+     <input v-focus/>
      ```
 
      </span>
 
      **[فهرست](#فهرست)**
 
-64.  ### What are the hook functions provided by directives?
+64.  ### hook function های که توسط دستورالعمل ها فراهم میشن کدوما هستن؟
 
      A directive object can provide several hook functions:
      1. bind: This occurs once the directive is attached to the element.
@@ -2564,7 +2564,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-65.  ### What are the directive Hook Arguments?
+65.  ### ارگومان های مربوط به دستورالعمل هوک چیه
 
      All the hooks have `el`, `binding`, and `vnode` as arguments. Along with that, **update** and **componentUpdated** hooks expose `oldVnode`, to differentiate between the older value passed and the newer value. Below are the arguments passed to the hooks,
      1. `el`: The element the directive is bound to and it can be used to directly manipulate the DOM.
@@ -2585,7 +2585,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-66.  ### How do you pass multiple values to a directive?
+66.  ### چطوری مقادیر رو به یه دستورالعمل میفرستی؟
 
      A directive can take any valid javascript expression. So if you want to pass multiple values then you can pass in a JavaScript object literal.
 
@@ -2616,7 +2616,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-67.  ### What is function shorthand in directive hooks?
+67.  ### خلاصه شده function توی محیط دستورالعمل چیه؟
 
      In few cases, you may want the same behavior on `bind` and `update` hooks irrespective of other hooks. In this situation you can use function shorthand,
 
@@ -2632,13 +2632,13 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-68.  ### What is the benefit of render functions over templates?
+68.  ### مزایای render function ها روی template ها چیا هستن؟
 
      In VueJS, the templates are very powerful and recommended to build HTML as part of your application. However, some of the special cases like dynamic component creation based on input or slot value can be achieved through render functions. Also, these functions gives the full programmatic power of javascript eco system.
 
      **[فهرست](#فهرست)**
 
-69.  ### What is a render function?
+69.  ### منظور از render function چیه؟
 
      Render function is a normal function which receives a `createElement` method as it’s first argument used to create virtual nodes. Internally Vue.js' templates actually compile down to render functions at build time. Hence templates are just syntactic sugar of render functions.
 
@@ -3028,7 +3028,7 @@ puppeteer:
 
 83.  ### What are inline templates?
 
-     If you keep an `inline-template` on a child component then it will use its inner content as a template instead of treating as reusable independent content.
+    If you keep an `inline-template` on a child component then it will use its inner content as a template instead of treating as reusable independent content.
 
      <span dir="ltr" align="left">
 
@@ -3502,11 +3502,11 @@ puppeteer:
 
 105. ### How do you configure vue loader in webpack?
 
-     Vue Loader's configuration is a bit different from other loaders by adding Vue Loader's plugin to your webpack config. The vue loader plugin is required for cloning any other rules(js and css rules) defined and applying them to the corresponding language blocks(<script> and <style>) in .vue files.
+    Vue Loader's configuration is a bit different from other loaders by adding Vue Loader's plugin to your webpack config. The vue loader plugin is required for cloning any other rules(js and css rules) defined and applying them to the corresponding language blocks(<script> and <style>) in .vue files.
 
-     For example, the simple demonistration of webpack configuration for vue loader would be as below,
+    For example, the simple demonistration of webpack configuration for vue loader would be as below,
 
-     <span dir="ltr" align="left">
+    <span dir="ltr" align="left">
 
      ```javascript
      // webpack.config.js
@@ -3544,7 +3544,7 @@ puppeteer:
 
      </span>
 
-     **[فهرست](#فهرست)**
+    **[فهرست](#فهرست)**
 
 106. ### What are asset url transform rules?
 
@@ -3564,9 +3564,9 @@ puppeteer:
 
 108. ### What is scoped CSS?
 
-     Scoped CSS is a mechanism in VueJS Single File Components(SFC) that prevents styles from leaking out of the current component and affecting other unintended components on your page. i.e, When a <style> tag has the scoped attribute, its CSS will apply to elements of the current component only. It uses PostCSS to transform scoped css to plain CSS.
+    Scoped CSS is a mechanism in VueJS Single File Components(SFC) that prevents styles from leaking out of the current component and affecting other unintended components on your page. i.e, When a <style> tag has the scoped attribute, its CSS will apply to elements of the current component only. It uses PostCSS to transform scoped css to plain CSS.
 
-     Let's take an example usage of scoped css,
+    Let's take an example usage of scoped css,
 
      <span dir="ltr" align="left">
 
@@ -3833,9 +3833,9 @@ puppeteer:
 
 117. ### Is it possible to use custom inject name for CSS modules?
 
-     You can customize the name of the injected computed property by giving the module attribute a value. This will be helpful to avoid overwriting injected styled if you have more than one <style> tags in a single *.vue component.
+    You can customize the name of the injected computed property by giving the module attribute a value. This will be helpful to avoid overwriting injected styled if you have more than one <style> tags in a single *.vue component.
 
-     For example, you can use module attribute as below,
+    For example, you can use module attribute as below,
 
 
      <span dir="ltr" align="left">
