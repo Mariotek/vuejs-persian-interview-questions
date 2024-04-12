@@ -116,22 +116,22 @@ puppeteer:
 |67 | [خلاصه شده funtion توی محیط دستورالعمل چیه؟](#خلاصه-شده-funtion-توی-محیط-دستورالعمل-چیه؟)|
 |68 | [مزایای render function ها روی template ها چیا هستن؟](#مزایای-render-function-ها-روی-template-ها-چیا-هستن؟)|
 |69 | [منظور از render function چیه؟](#منظور-از-render-function-چیه؟)|
-|70 | [Explain the structure of createElement with arguments](#1)|
-|71 | [How can you write duplicate virtual nodes in a component?](#1)|
+|70 | [ساختار createElement با آرگومان هاش رو توضیح بده؟](#1)|
+|71 | [چطوری میتونیم یه کپی از virtual nodes توی یه کامپوننت بسازیم?](#1)|
 |72 | [List down the template equivalents in render functions?](#1)|
-|73 | [What are functional components?](#1)|
-|74 | [What are the similarities between VueJS and ReactJS?](#1)|
-|75 | [What is the difference between VueJS and ReactJS?](#1)|
-|76 | [What are the advantages of VueJS over ReactJS?](#1)|
-|77 | [What are the advantages of ReactJS over VueJS?](#1)|
-|78 | [What are the differences between VueJS and Angular?](#1)|
-|79 | [What are dynamic components?](#1)|
-|80 | [What is the purpose of keep alive tag?](#1)|
-|81 | [What are async components?](#1)|
+|73 | [فانکشنال کامپوننت ها چیا هستن؟](#1)|
+|74 | [ری اکت و ویو چه شباهت هایی باهم دیگه دارن؟](#1)|
+|75 | [تفاوت ری اکت و ویو تو چی هست؟](#1)|
+|76 | [مزایایی که ویو نسبت به ری اکت داره چیا هستن؟](#1)|
+|77 | [مزایایی که ری اکت نسبت به ویو داره چیا هستن؟](#1)|
+|78 | [تفاوت بین ویو و انگولار تو چی هست؟](#1)|
+|79 | [منظور از داینامیک کامپوننت چیه؟](#1)|
+|80 | [هدف از استفاده از تگ keep alive چیه؟](#1)|
+|81 | [منظور از async component چیه؟](#1)|
 |82 | [What is the structure of async component factory?](#1)|
-|83 | [What are inline templates?](#1)|
-|84 | [What are X Templates?](#1)|
-|85 | [What are recursive components?](#1)|
+|83 | [inline template ها چیا هستن؟](#1)|
+|84 | [منظور از x template ها چیه؟](#1)|
+|85 | [منظور از recursive component چیه؟](#1)|
 |86 | [How do you resolve circular dependencies between components?](#1)|
 |87 | [How do you make sure vue application is CSP complaint?](#1)|
 |88 | [What is the difference between full and runtime only builds?](#1)|
@@ -141,23 +141,23 @@ puppeteer:
 |92 | [What is Dev Tools and its purpose?](#1)|
 |93 | [What is the browser support of VueJS?](#1)|
 |94 | [How do you use various CDNs?](#1)|
-|95 | [How do you force update?](#1)|
+|95 | [چطوری به صورت force یه اپدیتی رو انجام میدی؟](#1)|
 |96 | [What is the purpose of vuejs once directive?](#1)|
 |97 | [How do you access the root instance?](#1)|
 |98 | [List out top 10 organizations using Vuejs?](#1)|
 |99 | [What is the purpose of renderError?](#1)|
 |100| [How do you access parent instance?](#1)|
-|101| [What is vuex?](#1)|
-|102| [What are the major components of State Management Pattern?](#1)|
-|103| [How do you represent one way data flow in vuex?](#1)|
-|104| [What is a vuejs loader?](#1)|
-|105| [How do you configure vue loader in webpack?](#1)|
-|106| [What are asset url transform rules?](#1)|
-|107| [How do you work with preprocessors using vue loader?](#1)|
-|108| [What is scoped CSS?](#1)|
-|109| [Is it possible to mix both local and global styles?](#1)|
-|110| [How do you use deep selectors?](#1)|
-|111| [Is parent styles leaked into child components in scoped css?](#1)|
+|101| [vuex چیه؟](#1)|
+|102| [کامپوننت های اصلی برای state management patter جیا هستن؟](#1)|
+|103| [چطوری توی vuex ساختار یکطرفه data flow رو اعمال میکنی؟](#1)|
+|104| [منظور از vuejs loader جیه؟](#1)|
+|105| [چطوری vue loader رو توی webpack کانفیگ میکنی؟](#1)|
+|106| [قوانین تغییر آدرس های asset ها چیا هستن؟](#1)|
+|107| [چطوری موقع استفاده از vue loader از preprocecssor ها استفاده کنیم؟](#1)|
+|108| [منظور از scoped css چیه؟](#1)|
+|109| [میشه استایل های لوکال رو با استال های گلوبال ترکیب کرد؟](#1)|
+|110| [چطوری از ثی deep selector ها استفاده میکنی؟](#1)|
+|111| [استایل های کامپوننت پدر که scoped هستن میتونن روی استایل های فرزند اثر بذارن؟](#1)|
 |112| [How do you style dynamic generated content using scoped css?](#1)|
 |113| [Is CSS modules supported in Vuejs?](#1)|
 |114| [Can I use runtime builds for all templates?](#1)|
@@ -179,7 +179,7 @@ puppeteer:
 |130| [What are custom blocks?](#1)|
 |131| [What are the features of stylelint?](#1)|
 |132| [What are the principles for vuex application structure?](#1)|
-|133| [Is Vuex supports hot reloading?](#1)|
+|133| [vuex از hot reloading پشتیبانی میکنه یا نه؟](#1)|
 |134| [What is the purpose of hotUpdate API of vuex store?](#1)|
 |135| [How do you test mutations?](#1)|
 |136| [How do you test your getters?](#1)|
@@ -259,25 +259,25 @@ puppeteer:
 |210| [How to implement DateTime localization?](#1)|
 |211| [How do you implement Number localization?](#1)|
 |212| [How do you perform locale changing](#1)|
-|213| [What is Lazy loading translations?](#1)|
-|214| [What is the main difference between method and computed property?](#1)|
-|215| [What is vuetify?](#1)|
-|216| [How do you watch for nested data changes?](#1)|
-|217| [How to trigger watchers on initialization?](#1)|
-|218| [What is the purpose of comments option?](#1)|
-|219| [How to identify whether code is running on client or server?](#1)|
-|220| [How do you watch route object changes?](#1)|
-|221| [How do you sync current route in vuex store?](#1)|
-|222| [What are navigation guards in vue router?](#1)|
-|223| [Can I use computed property in another computed property?](#1)|
-|224| [How can I use imported constant in template section?](#1)|
-|225| [Is recommended to use async for computed properties?](#1)|
-|226| [What happens if you use duplicate field names?](#1)|
-|227| [Why the component data must be a function?](#1)|
-|228| [What is the reason for recommendation for multi-word component names?](#1)|
-|229| [How to use composition API in Vue2.0?](#1)|
-|230| [What is composition API?](#1)|
-|231| [What is the best way to re-render a component?](#1)
+|213| [منظور از lazy loading translation چیه؟](#1)|
+|214| [تفاوت اصلی بین متد و computed property چیه؟](#1)|
+|215| [vuetify چیه؟](#1)|
+|216| [چطوری تغییرات یه object با لایه های زیری رو watch میکنی؟](#1)|
+|217| [چطوری watcher ها رو موقع initialization ران میکنی؟](#1)|
+|218| [هدف از استفاده کردن از comments option چیه؟](#1)|
+|219| [چطوری تعریف میکنی که یه کد توی سرور ران بشه یا سمت کلاینت؟](#1)|
+|220| [چطوری تغییرات route object رو watch میکنی؟](#1)|
+|221| [چطوری route فعلی رو با vuex store sync میکنی؟](#1)|
+|222| [محافظت هایی که برای navigate کردن توی vue router وجود داره چیا هستن؟](#1)|
+|223| [میتونم از یه پراپرتی computed توی یه پراپرتی computed دیگه استفاده کنم؟](#1)|
+|224| [چطوری میتونم یه constant رو توی template استفاده کنم؟](#1)|
+|225| [آیا استفاده کردن از sync برای پراپرتی های computed توصیه میشه؟?](#1)|
+|226| [اگه از یه feild name ای دو جا استفاده کنیم چی میشه؟](#1)|
+|227| [چرا دیتای یک کامپوننت باید همیشه یه function باشه؟](#1)|
+|228| [دلیل اینکه توصیه میشه از فرمت multi-word برای اسم کامپوننت ها استفاده کنیم چیه؟](#1)|
+|229| [چطوری میتونیم از composition API توی vue ورژن ۲ استفاده کنیم؟](#1)|
+|230| [منظور از composition API چیه؟](#1)|
+|231| [بهترین روش برای re-render کردن یه کامپوننت چیه؟](#1)
 
 {Pishgoftar}
 
@@ -2679,7 +2679,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-70.  ### Explain the structure of createElement with arguments?
+70.  ### ساختار createElement با آرگومان هاش رو توضیح بده؟?
 
      The createElement accepts few arguments to use all the template features.
 
@@ -2749,7 +2749,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-71.  ### How can you write duplicate virtual nodes in a component?
+71.  ### چطوری میتونیم یه کپی از virtual nodes توی یه کامپوننت بسازیم?
 
      All virtual nodes(VNodes) in the component tree must be unique.i.e, You can't write duplicated nodes in a straightforward way. If you want to duplicate the same element/component many times then you should use factory function.
 
@@ -2802,7 +2802,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-73.  ### What are functional components?
+73.  ### فانکشنال کامپوننت ها چیا هستن؟
 
      The functional components are just simple functions to create simple components just by passing a context. Every functional component follows two rules,
       1. **Stateless:** It doesn’t keep any state by itself
@@ -2833,7 +2833,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-74.  ### What are the similarities between VueJS and ReactJS?
+74.  ### ری اکت و ویو چه شباهت هایی باهم دیگه دارن؟
 
      Even though ReactJS and VueJS are two different frameworks there are few similarities(apart from the common goal of utilized in interface design) between them.
 
@@ -2843,7 +2843,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-75.  ### What is the difference between VueJS and ReactJS?
+75.  ### تفاوت ری اکت و ویو تو چی هست؟
 
      Even though VueJS and ReactJS share few common features there are many difference between them.
 
@@ -2859,7 +2859,7 @@ puppeteer:
 
       **[فهرست](#فهرست)**
 
-76.  ### What are the advantages of VueJS over ReactJS?
+76.  ### مزایایی که ویو نسبت به ری اکت داره چیا هستن؟
 
      Vue has the following advantages over React
      1. Vue is smaller and faster
@@ -2868,7 +2868,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-77.  ### What are the advantages of ReactJS over VueJS?
+77.  ### مزایایی که ری اکت نسبت به ویو داره چیا هستن؟
 
      React has the following advantages over Vue
      1. ReactJS gives more flexibility in large apps developing
@@ -2878,7 +2878,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-78.  ### What are the differences between VueJS and Angular?
+78.  ### تفاوت بین ویو و انگولار تو چی هست؟
 
      The  the syntax of Vue and Angular is common at some points because Angular is the basis for VueJS development in the beginning.
 
@@ -2896,7 +2896,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-79.  ### What are dynamic components?
+79.  ### منظور از داینامیک کامپوننت چیه؟
 
      The dynamic component is used to dynamically switch beetween multiple components using **<component>** element and pass data to v-bind:is attribute.
 
@@ -2943,7 +2943,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-80.  ### What is the purpose of keep alive tag?
+80.  ### هدف از استفاده از تگ keep alive چیه؟
 
      Keep-alive tag is an abstract component used to preserve component state or avoid re-rendering. When you wrapped <keep-alive> tag around a dynamic component,  it caches the inactive component instances without destroying them.
 
@@ -2979,7 +2979,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-81.  ### What are async components?
+81.  ### منظور از async component چیه؟
 
      In large applications, we may need to divide the app into smaller chunks and only load a component from the server when it’s needed. To make this happen, Vue allows you to define your component as a factory function that asynchronously resolves your component definition. These components are known as async component.
 
@@ -3026,7 +3026,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-83.  ### What are inline templates?
+83.  ### inline template ها چیا هستن؟
 
     If you keep an `inline-template` on a child component then it will use its inner content as a template instead of treating as reusable independent content.
 
@@ -3047,7 +3047,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-84.  ### What are X Templates?
+84.  ### منظور از x template ها چیه؟
 
      Apart from regular templates and inline templates, you can also define templates using a script element with the type `text/x-template` and then referencing the template by an id.
 
@@ -3077,7 +3077,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-85.  ### What are recursive components?
+85.  ### منظور از recursive component چیه؟
 
      The Components that can recursively invoke themselves in their own template are known as recursive components.
 
@@ -3286,7 +3286,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-95.  ### How do you force update?
+95.  ### چطوری به صورت force یه اپدیتی رو انجام میدی؟
 
      It is extremely rare situation of having to manually force an update despite the fact that no reactive data has changed. i.e, To force the Vue instance to re-render manually. You can do it force update using **vm.$forceUpdate()** API method.
 
@@ -3416,13 +3416,13 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-101. ### What is vuex?
+101. ### vuex چیه؟
 
      Vuex is a state management pattern + library (Flux-inspired Application Architecture) for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
 
      **[فهرست](#فهرست)**
 
-102. ### What are the major components of State Management Pattern?
+102. ### کامپوننت های اصلی برای state management patter جیا هستن؟
 
      The state management has state, view and actions as major components. The pattern followed by these components in a application is known as State Management Pattern. Below are the components in a detail,
      1. The **state**, which is the source of truth that drives our app
@@ -3458,7 +3458,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-103. ### How do you represent one way data flow in vuex?
+103. ### چطوری توی vuex ساختار یکطرفه data flow رو اعمال میکنی؟
 
      Vue.js has a one-way data flow model, through the props property. The same concept can be represented in vuex has below,
 
@@ -3466,7 +3466,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-104. ### What is a vuejs loader?
+104. ### منظور از vuejs loader جیه؟
 
      Vue loader is a loader for webpack that allows you to author Vue components in a format called Single-File Components (SFCs).
 
@@ -3500,7 +3500,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-105. ### How do you configure vue loader in webpack?
+105. ### چطوری vue loader رو توی webpack کانفیگ میکنی؟
 
     Vue Loader's configuration is a bit different from other loaders by adding Vue Loader's plugin to your webpack config. The vue loader plugin is required for cloning any other rules(js and css rules) defined and applying them to the corresponding language blocks(<script> and <style>) in .vue files.
 
@@ -3546,7 +3546,7 @@ puppeteer:
 
     **[فهرست](#فهرست)**
 
-106. ### What are asset url transform rules?
+106. ### قوانین تغییر آدرس های asset ها چیا هستن؟
 
      Below are the list of Asset URL transform rules
      1. **Absolute path**: If the URL is an absolute path (for example, /images/loader.png)then it will be preserved as-is.
@@ -3556,13 +3556,13 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-107. ### How do you work with preprocessors using vue loader?
+107. ### چطوری موقع استفاده از vue loader از preprocecssor ها استفاده کنیم؟
 
      `Vue-loader` will automatically infer the proper loaders to use based on the `lang` attribute of a language block and the rules defined in webpack config. You can use pre-processors such as `SASS,LESS, Stylus and PostCSS` using vuejs loader.
 
      **[فهرست](#فهرست)**
 
-108. ### What is scoped CSS?
+108. ### منظور از scoped css چیه؟
 
     Scoped CSS is a mechanism in VueJS Single File Components(SFC) that prevents styles from leaking out of the current component and affecting other unintended components on your page. i.e, When a <style> tag has the scoped attribute, its CSS will apply to elements of the current component only. It uses PostCSS to transform scoped css to plain CSS.
 
@@ -3604,7 +3604,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-109. ### Is it possible to mix both local and global styles?
+109. ### میشه استایل های لوکال رو با استال های گلوبال ترکیب کرد؟
 
      Yes, you can include both scoped and non-scoped styles in the same component. If you don't mention scoped attribute then it will become global style.
 
@@ -3624,7 +3624,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-110. ### How do you use deep selectors?
+110. ### چطوری از ثی deep selector ها استفاده میکنی؟
 
      In scoped css, if you need to modify the styles of a child component using deep selectors(i,e from parent scoped css) then you need to use **>>>** combinator.
 
@@ -3653,7 +3653,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-111. ### Is parent styles leaked into child components in scoped css?
+111. ### استایل های کامپوننت پدر که scoped هستن میتونن روی استایل های فرزند اثر بذارن؟
 
      The parent component's styles will not leak into child components. But a child component's root node will be affected by both the parent's scoped CSS and the child's scoped CSS. i.e, your child component's root element has a class that also exists in the parent component, the parent component's styles will leak to the child. Anyway this is by design so that the parent can style the child root element for layout purposes.
 
@@ -4151,7 +4151,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-133. ### Is Vuex supports hot reloading?
+133. ### vuex از hot reloading پشتیبانی میکنه یا نه؟
 
      Yes, vuex supports hot-reloading for mutations, modules, actions and getters during development. You need to use either webpack's hot module replacement API or browserify's hot module replacement plugin.
 
@@ -6484,7 +6484,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-213. ### What is Lazy loading translations?
+213. ### منظور از lazy loading translation چیه؟
 
      The loading of all translation files at once is unnecessary and it may impact the performance too. It will be easy for lazy loading or asynchronously loading the translation files when you use webpack. i.e, You can dynamically load or import language translations using webpack as below,
 
@@ -6546,7 +6546,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-214. ### What is the main difference between method and computed property?
+214. ### تفاوت اصلی بین متد و computed property چیه؟
 
      The main difference between a computed property and a method is that computed properties are cached and invoke/change only when their dependencies change. Whereas a method will evaluate every time it's called.
 
@@ -6577,7 +6577,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-216. ### How do you watch for nested data changes?
+216. ### چطوری تغییرات یه object با لایه های زیری رو watch میکنی؟
 
      You can use deep watcher by setting `deep: true` in the options object. This option enables us to detect nested value changes inside Objects.
 
@@ -6597,7 +6597,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-217. ### How to trigger watchers on initialization?
+217. ### چطوری watcher ها رو موقع initilization ران میکنی؟
 
      You can use `immediate: true` option in order to trigger watchers when the vue instance (or component) is being created. i.e This option will trigger the callback immediately with the current value of the expression.
 
@@ -6618,7 +6618,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-218. ### What is the purpose of comments option?
+218. ### هدف از استفاده کردن از comments option چیه؟
 
      When `comments` option enabled, it will preserve and render HTML comments found in templates. By default, it's value is false. Let's see the action in an example,
 
@@ -6650,7 +6650,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-219. ### How to identify whether code is running on client or server?
+219. ### چطوری تعریف میکنی که یه کد توی سرور ران بشه یا سمت کلاینت؟
 
      You can use `vm.$isServer` method to know whether the current Vue instance is running on the server or client.
 
@@ -6669,7 +6669,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-220. ### How do you watch route object changes?
+220. ### چطوری تغییرات route object رو watch میکنی؟
 
      You can setup a watcher on the `$route` in your component. It observes for route changes and when changed ,sets the message property.
 
@@ -6687,7 +6687,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-221. ### How do you sync current route in vuex store?
+221. ### چطوری route فعلی رو با vuex store sync میکنی؟
 
      You can use `vue-router-sync` library to sync current $route object in vuex store's state.
 
@@ -6720,7 +6720,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-222. ### What are navigation guards in vue router?
+222. ### محافظت هایی که برای navigate کردن توی vue router وجود داره چیا هستن؟
 
      The navigation guards of vue-router are used to protect navigations either by redirecting it or canceling it.
 
@@ -6731,7 +6731,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-223. ### Can I use computed property in another computed property?
+223. ### میتونم از یه پراپرتی computed توی یه پراپرتی computed دیگه استفاده کنم؟
 
      Yes, you can access it directly as you would data props.
 
@@ -6762,7 +6762,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-224. ### How can I use imported constant in template section?
+224. ### چطوری میتونم یه constant رو توی template استفاده کنم؟
 
      The variables need to be exposed on your data in order to use them in template section. i.e, You can't use them directly on template.
 
@@ -6793,7 +6793,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-225. ### Is recommended to use async for computed properties?
+225. ### آیا استفاده کردن از sync برای پراپرتی های computed توصیه میشه؟?
      No, it is not recommended. Computed properties should be synchronous. But if you still use asynchronous actions inside them, they may not work as expected and can lead to an unexpected behaviour.
 
      For example, the below usage of async/await is not recommended,
@@ -6812,11 +6812,11 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-226. ### What happens if you use duplicate field names?
+226. ### اگه از یه feild name ای دو جا استفاده کنیم چی میشه؟
 
      **[فهرست](#فهرست)**
 
-227. ### Why the component data must be a function?
+227. ### چرا دیتای یک کامپوننت باید همیشه یه function باشه؟
 
      The component data must be a function instead directly providing the object. This is because each instance needs to maintain an independent copy of the returned data object. Otherwise one component instance data changes will impact the data of all other instances.
 
@@ -6839,7 +6839,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-228. ### What is the reason for recommendation for multi-word component names?
+228. ### دلیل اینکه توصیه میشه از فرمت multi-word برای اسم کامپوننت ها استفاده کنیم چیه؟
 
      Component names should always be multi-word, except for root level or built-in vue components(such as `<transition>` or `<component>` etc). This recommendation is  to prevent conflicts with existing and future HTML elements, since all HTML elements are a single word.
      
@@ -6859,7 +6859,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-229. ### How to use composition API in Vue2.0?
+229. ### چطوری میتونیم از composition API توی vue ورژن ۲ استفاده کنیم؟
 
      Even though the Composition API is a part of Vue 3, it has been made available for Vue 2 as well by installing `@vue/composition-api` as a plugin via `Vue.use()`.
 
@@ -6903,13 +6903,13 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-230. ### What is composition API?
+230. ### منظور از composition API چیه؟
 
      Composition API is a set of additive, function-based APIs that allow flexible composition of component logic.
 
      **[فهرست](#فهرست)**
      
-231. ### What is the best way to re-render a component?
+231. ### بهترین روش برای re-render کردن یه کامپوننت چیه؟
 
      The best way to force Vue to re-render a component is to set a `:key` on the component. i.e, Whenever the component to be re-rendered, just change the value of the key then Vue will re-render the component.
      
