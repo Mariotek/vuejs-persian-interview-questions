@@ -158,27 +158,27 @@ puppeteer:
 |109| [میشه استایل های لوکال رو با استال های گلوبال ترکیب کرد؟](#1)|
 |110| [چطوری از ثی deep selector ها استفاده میکنی؟](#1)|
 |111| [استایل های کامپوننت پدر که scoped هستن میتونن روی استایل های فرزند اثر بذارن؟](#1)|
-|112| [How do you style dynamic generated content using scoped css?](#1)|
-|113| [Is CSS modules supported in Vuejs?](#1)|
-|114| [Can I use runtime builds for all templates?](#1)|
-|115| [How to use CSS modules in vuejs?](#1)|
-|116| [Can I use CSS modules for preprocessors?](#1)|
-|117| [Is it possible to use custom inject name for CSS modules?](#1)|
-|118| [What is hot reloading in vue loader?](#1)|
-|119| [What is the default behavior of hot reloading?](#1)|
-|120| [How do you disable hot reloading explicitly?](#1)|
-|121| [How do you use hot reloading?](#1)|
-|122| [What are state preservation rules in hot reloading?](#1)|
-|123| [How to create functional components using vue loader?](#1)|
-|124| [How do you access global properties of functional components?](#1)|
-|125| [How do you perform testing in vuejs?](#1)|
-|126| [How do you apply linting for css?](#1)|
-|127| [How do you use eslint plugin?](#1)|
-|128| [What is the purpose of eslint loader?](#1)|
-|129| [What is CSS extraction?](#1)|
-|130| [What are custom blocks?](#1)|
-|131| [What are the features of stylelint?](#1)|
-|132| [What are the principles for vuex application structure?](#1)|
+|112| [چطوری مقادیری که به صورت داینامیک ایجاد میشن رو با scoped css استایل دهی میکنی؟](#1)|
+|113| [css modules توی vue پشتیبانی میشه یا نه؟](#1)|
+|114| [میتونیم از runtime build برای همه template ها استفاده کنیم؟](#1)|
+|115| [چطوری از css module ها توی vuejs استفاده کنیم؟](#1)|
+|116| [میتونیم از css module ها برای preprocessor ها استفاده کنیم؟](#1)|
+|117| [میشه از inject کردن یه name کاستوم برای css module ها استفاده کرد؟](#1)|
+|118| [منظور از hot reloading توی vue loader چیه؟](#1)|
+|119| [عمکرد عادی برای hot reloading چیه؟](#1)|
+|120| [میشه hot reloading رو برای قسمت خاصی غیرفعال کرد ؟ چطوری؟](#1)|
+|121| [چطوری از hot reloading استفاده کنیم ؟](#1)|
+|122| [منظور از state preservation توی hot reloading جیه؟](#1)|
+|123| [چطوری با استفاده از vue loader قانکشنال کامپوننت بسازیم؟](#1)|
+|124| [چطوری به پراپرتی های گلوبال توی محیط فانکشنال کامپوننت دسترسی پیدا کنیم؟](#1)|
+|125| [چطوری testing رو توی vuejs انجام میدی؟](#1)|
+|126| [چطوری عیب یابی رو برای css انجام میدی؟](#1)|
+|127| [eslint چیه و چطوری ازش استفاده میکنی؟](#1)|
+|128| [منظور از eslint loader چیه و هدفش چیه؟](#1)|
+|129| [منظور از css extraction چیه؟](#1)|
+|130| [کاستوم block ها چیا هستن؟](#1)|
+|131| [مرایای استفاده از stylelint چیه؟](#1)|
+|132| [1](#1)|
 |133| [vuex از hot reloading پشتیبانی میکنه یا نه؟](#1)|
 |134| [What is the purpose of hotUpdate API of vuex store?](#1)|
 |135| [How do you test mutations?](#1)|
@@ -250,15 +250,15 @@ puppeteer:
 |201| [What is async error handling?](#1)|
 |202| [What are Dynamic Directive Arguments?](#1)|
 |203| [What are the drawbacks of dynamic directive arguments?](#1)|
-|204| [What is the special handling for null values in dynamic directive arguments?](#1)|
+|204| [بهترین نوع هندل کردن مقادیر null توی داینامیک دایرکتیو ها چیا هستن؟](#1)|
 |205| [Can I use dynamic directive null value for slots?](#1)|
-|206| [What is Vue I18n plugin?](#1)|
-|207| [#What are the types of formatting?](#1)|
-|208| [What is custom formatting?](#1)|
-|209| [How do you handle Pluralization?](#1)|
-|210| [How to implement DateTime localization?](#1)|
-|211| [How do you implement Number localization?](#1)|
-|212| [How do you perform locale changing](#1)|
+|206| [پلاگین vue I18n چیه؟](#1)|
+|207| [تایپ های formatting چیا هستن؟](#1)|
+|208| [منظور از custom formatting چیه؟](#1)|
+|209| [Pluralization رو چطوری هندل میکنی؟](#1)|
+|210| [چطوری localization رو برای تاریخ ها انجام بدیم؟](#1)|
+|211| [چطوری برای اعداد localization رو انجام میدی؟](#1)|
+|212| [چطوری باعث یه تغییر لوکال میشی؟](#1)|
 |213| [منظور از lazy loading translation چیه؟](#1)|
 |214| [تفاوت اصلی بین متد و computed property چیه؟](#1)|
 |215| [vuetify چیه؟](#1)|
@@ -3719,25 +3719,25 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-112. ### How do you style dynamic generated content using scoped css?
+112. ### چطوری مقادیری که به صورت داینامیک ایجاد میشن رو با scoped css استایل دهی میکنی؟
 
      The scoped css style doesn't impact v-html directive's dynamically generated content. In this case, you can use deep selectors to solve this styling issue.
 
      **[فهرست](#فهرست)**
 
-113. ### Is CSS modules supported in Vuejs?
+113. ### css modules توی vue پشتیبانی میشه یا نه؟
 
      Yes, vue-loader provides first-class integration with CSS Modules as an alternative for simulated scoped CSS.
 
      **[فهرست](#فهرست)**
 
-114. ### Can I use runtime builds for all templates?
+114. ### میتونیم از runtime build برای همه template ها استفاده کنیم؟
 
      No, templates (or any Vue-specific HTML) are ONLY allowed in .vue files and render functions are required in other cases.
 
      **[فهرست](#فهرست)**
 
-115. ### How to use CSS modules in vuejs?
+115. ### چطوری از css module ها توی vuejs استفاده کنیم؟
 
      Below are the steps to use css modules in VueJS,
      1. **Enable CSS modules:**  CSS Modules must be enabled by passing modules: true option to css-loader
@@ -3803,7 +3803,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-116. ### Can I use CSS modules for preprocessors?
+116. ### میتونیم از css module ها برای preprocessor ها استفاده کنیم؟
 
      Yes, you can use preprocessors with CSS Modules.
 
@@ -3831,7 +3831,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-117. ### Is it possible to use custom inject name for CSS modules?
+117. ### میشه از inject کردن یه name کاستوم برای css module ها استفاده کرد؟
 
     You can customize the name of the injected computed property by giving the module attribute a value. This will be helpful to avoid overwriting injected styled if you have more than one <style> tags in a single *.vue component.
 
@@ -3854,13 +3854,13 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-118. ### What is hot reloading in vue loader?
+118. ### منظور از hot reloading توی vue loader چیه؟
 
      Hot reloading is not about reloading the page when you edit any .vue file. Instead, when you edit a *.vue file, all instances of that component will be swapped in without reloading the page. It improves the development experience when you are tweaking the templates or styling of your components.
 
      **[فهرست](#فهرست)**
 
-119. ### What is the default behavior of hot reloading?
+119. ### عمکرد عادی برای hot reloading چیه؟
 
      Hot Reload is always enabled except below situations:
 
@@ -3870,7 +3870,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-120. ### How do you disable hot reloading explicitly?
+120. ### میشه hot reloading رو برای قسمت خاصی غیرفعال کرد ؟ چطوری؟
 
      You can use `hotReload: false` option to disable the Hot Reload explicitly.
 
@@ -3896,13 +3896,13 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-121. ### How do you use hot reloading?
+121. ### چطوری از hot reloading استفاده کنیم ؟
 
      The vue loader plugin internally uses hot reloading. If you are scaffolding project with `vue-cli`, hot reloading comes out of the box but if you are manually setting up the project then hot reloading is enabled by default with `webpack-dev-server --hot` command.
 
      **[فهرست](#فهرست)**
 
-122. ### What are state preservation rules in hot reloading?
+122. ### منظور از state preservation توی hot reloading جیه؟
 
      Below are the state preservation rules in hot reloading,
 
@@ -3912,7 +3912,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-123. ### How to create functional components using vue loader?
+123. ### چطوری با استفاده از vue loader قانکشنال کامپوننت بسازیم؟
 
      You can create functional components by adding functional attribute to template block,
 
@@ -3929,7 +3929,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-124. ### How do you access global properties of functional components?
+124. ### چطوری به پراپرتی های گلوبال توی محیط فانکشنال کامپوننت دسترسی پیدا کنیم؟
 
      If you need to access properties defined globally on `Vue.prototype` then you can access them on parent,
 
@@ -3946,7 +3946,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-125. ### How do you perform testing in vuejs?
+125. ### چطوری testing رو توی vuejs انجام میدی؟
 
      You can perform testing in two ways,
 
@@ -3955,7 +3955,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-126. ### How do you apply linting for css?
+126. ### چطوری عیب یابی رو برای css انجام میدی؟
 
      The stylelint linter supports linting style parts of Vue single file components. You can run linter on particular vue file as below,
 
@@ -3988,7 +3988,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-127. ### How do you use eslint plugin?
+127. ### eslint چیه و چطوری ازش استفاده میکنی؟
 
      The official `eslint-plugin-vue` supports linting both the template and script parts of Vue single file components. You can configure plugin in your ESLint config,
 
@@ -4019,7 +4019,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-128. ### What is the purpose of eslint loader?
+128. ### منظور از eslint loader چیه و هدفش چیه؟
      You can use `eslint-loader` for *.vue files in order to automatically linted on save during development. It can be installed as npm module,
 
      <span dir="ltr" align="left">
@@ -4055,7 +4055,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-129. ### What is CSS extraction?
+129. ### منظور از css extraction چیه؟
      `CSS Extraction` is used to extract all the processed CSS in all Vue components into a single CSS file. For webpack4, you need to install below npm command,
 
      <span dir="ltr" align="left">
@@ -4103,7 +4103,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-130. ### What are custom blocks?
+130. ### کاستوم block ها چیا هستن؟
      You can define custom language blocks inside *.vue files based on the `lang` attribute of the block, the block's tag name, and the rules in your webpack config. You can also use `resourceQuery` to match a rule against a custom block with no lang.
 
      For example, to match against `<message>` custom blocks.
@@ -4127,7 +4127,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-131. ### What are the features of stylelint?
+131. ### مرایای استفاده از stylelint چیه؟
 
      Below are the list of major stylelint features
      1. It has more than **160 built-in rules** to catch errors, apply limits and enforce stylistic conventions
@@ -5957,7 +5957,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-204. ### What is the special handling for null values in dynamic directive arguments?
+204. ### بهترین نوع هندل کردن مقادیر null توی داینامیک دایرکتیو ها چیا هستن؟
 
      Dynamic argument values are expected to be strings but it allows `null` as a special value that explicitly indicates that the binding should be removed. Other types will be treated as  mistakes and will trigger a warning. So null value can be applied for v-bind and v-on.
 
@@ -5969,7 +5969,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-206. ### What is Vue I18n plugin?
+206. ### پلاگین vue I18n چیه؟
 
      Vue I18n is an internationalization plugin of Vue.js. It easily integrates some localization features to your Vue.js Application.
 
@@ -6035,7 +6035,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-207. ### What are the types of formatting?
+207. ### تایپ های formatting چیا هستن؟
 
      Basically there are 4 types of formatting available in i18n plugin,
      1. **Named formatting:** First You need to define the message keys in curly braces({})
@@ -6195,7 +6195,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-208. ### What is custom formatting?
+208. ### منظور از custom formatting چیه؟
      You can use custom formatting for some of the formatting cases such as ICU formatting syntax (message "pattern" strings with variable-element placeholders enclosed in {curly braces}). It implement Formatter Interface.
 
      <span dir="ltr" align="left">
@@ -6232,7 +6232,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-209. ### How do you handle Pluralization?
+209. ### Pluralization رو چطوری هندل میکنی؟
 
      You can translate with pluralization by defining the locale that have a pipe | separator, and define plurals in pipe separator. Remember that template should use $tc() instead of $t().
 
@@ -6283,7 +6283,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-210. ### How to implement DateTime localization?
+210. ### چطوری localization رو برای تاریخ ها انجام بدیم؟
 
      You can localize the datetime with definition formats(e.g. short, long, etc).
 
@@ -6362,7 +6362,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-211. ### How do you implement Number localization?
+211. ### چطوری برای اعداد localization رو انجام میدی؟
 
      You can localize the number with definition formats(e.g. currency, etc)
 
@@ -6433,7 +6433,7 @@ puppeteer:
 
      **[فهرست](#فهرست)**
 
-212. ### How do you perform locale changing?
+212. ### چطوری باعث یه تغییر لوکال میشی؟?
 
      All child components of a root instance are localized using the locale property of the VueI18n class. You can change the value of the locale property of the VueI18n instance as below.
 
